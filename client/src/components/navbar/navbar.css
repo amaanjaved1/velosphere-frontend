@@ -98,7 +98,7 @@ header .nav-btn {
     background-color: black;
     transition: 1s;
     transform: translateY(-100vh);
-    border-radius: 4rem;
+    border-radius: 0 0 4rem 4rem;
   }
 
   header .responsive_nav {

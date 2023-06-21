@@ -3,9 +3,13 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useRef } from "react";
 import "./navbar.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setLogout } from "state/index.js";
 
 export const Navbar = () => {
   const navRef = useRef(null);
+
+  const dispatch = useDispatch();
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -13,7 +17,7 @@ export const Navbar = () => {
 
   return (
     <header>
-      <h1 class="logo-text">
+      <h1 className="logo-text">
         <a href="/">
           <span>IC</span>
         </a>
@@ -26,10 +30,11 @@ export const Navbar = () => {
           AirTable
         </a>
         <a href="/login">
-          {" "}
-          <span className="underline">Log Out</span>
+          <span className="underline" onClick={() => dispatch(setLogout())}>
+            Log Out
+          </span>
         </a>
-        <button class="nav-btn nav-close-btn" onClick={showNavbar}>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <AiFillCloseCircle />
         </button>
       </nav>
