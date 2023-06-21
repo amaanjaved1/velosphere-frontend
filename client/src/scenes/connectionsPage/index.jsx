@@ -1,5 +1,11 @@
 import React from "react";
+import { Navbar } from "components/navbar/navbar";
 
 export const ConnectionsPage = () => {
-  return <div>Connections Page</div>;
+  return (
+    <div>
+      <Navbar />
+      Connections Page
+    </div>
+  );
 };

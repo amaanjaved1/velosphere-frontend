@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
@@ -18,8 +19,8 @@ h1 {
 }
 
 .app {
-  background: burlywood;
-  height: 100vh;
+  background: #000020;
+  min-height: 100vh;
 }
 
 * {

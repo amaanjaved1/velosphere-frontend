@@ -1,5 +1,5 @@
 import React from "react";
-import { BiCategory } from "react-icons/bi";
+import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useRef } from "react";
 import "./navbar.css";
@@ -13,7 +13,11 @@ export const Navbar = () => {
 
   return (
     <header>
-      <h1>Logo</h1>
+      <h1 class="logo-text">
+        <a href="/">
+          <span>IC</span>
+        </a>
+      </h1>
       <nav ref={navRef}>
         <a href="/">Home</a>
         <a href="/connections">My Connections</a>
@@ -21,13 +25,16 @@ export const Navbar = () => {
         <a href="https://airtable.com/shrTsoJhfgmp4rnt1/tbl1VhHXzHipl7geY">
           AirTable
         </a>
-        <a href="/login">Log Out</a>
+        <a href="/login">
+          {" "}
+          <span className="underline">Log Out</span>
+        </a>
         <button class="nav-btn nav-close-btn" onClick={showNavbar}>
           <AiFillCloseCircle />
         </button>
       </nav>
       <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-        <BiCategory />
+        <IoIosArrowDropdownCircle />
       </button>
     </header>
   );
