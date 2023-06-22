@@ -19,7 +19,7 @@ export const Navbar = () => {
     <header>
       <h1 className="logo-text">
         <a href="/">
-          <span>IC</span>
+          <span>VS</span>
         </a>
       </h1>
       <nav ref={navRef}>

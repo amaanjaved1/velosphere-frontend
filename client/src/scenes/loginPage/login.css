@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.login {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-side {
+  background-color: black;
+  width: 50%;
+  max-width: 600px;
+}
+
+.image-side {
+  /* Black and white gradient */
+  background-image: url("../../../public/bw-gradient.png");
+
+  /* Tangerine gradient */
+  /* background-image: url("../../../public/tangerine-gradient.png"); */
+
+  /* Scotiabank gradient  */
+  /* background-image: url("../../../public/scotiabank-gradient.png"); */
+
+  /* MD Financial gradient */
+  /* background-image: url("../../../public/mdfinancial-gradient.png"); */
+
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: black;
+}
+
+.icon {
+  width: 65px;
+  height: 60px;
+  background-color: red;
+  border-radius: 23px;
+  margin-top: 25px;
+  padding: 5px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-text {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  padding-right: 15px;
+  letter-spacing: 0.1rem;
+}
+
+.title-com {
+  align-self: flex-end;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 3px;
+  border-radius: 7px;
+  color: black;
+}
+
+.slogan {
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  margin-bottom: 25px;
+  letter-spacing: 0.1rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .image-side {
+    display: none;
+  }
+
+  .form-side {
+    width: 100%;
+    max-width: 100%;
+  }
+}
