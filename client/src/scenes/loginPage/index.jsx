@@ -14,40 +14,49 @@ export const LoginPage = () => {
           </div>
           <h2 className="slogan">Unite. Collaborate. Thrive.</h2>
         </div>
-        <form>
-          <label htmlFor="company" className="label">
-            Select company:
-          </label>
-          <select name="company" id="company" className="input">
+        <form className="form-content">
+          <select name="company" id="company" className="input-dropdown">
             <option value="scotiabank">Scotiabank</option>
             <option value="tangerine">Tangerine</option>
             <option value="mdfinancial">MD Financial</option>
           </select>
 
-          <label htmlFor="email" className="label">
-            Enter email:
-          </label>
-          <input type="email" name="email" id="email" className="input" />
+          <div className="form-entry">
+            <label htmlFor="email" className="label">
+              Enter email:
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="input-content"
+            />
+          </div>
 
-          <label htmlFor="password" className="label">
-            Enter password:
-          </label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            className="input"
-          />
+          <div className="form-entry">
+            <label htmlFor="password" className="label">
+              Enter password:
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              className="input-content"
+            />
+          </div>
 
-          <button type="submit" className="button">
-            Submit
+          <button type="submit" className="submit-button">
+            Sign In
           </button>
-          <h4 className="select-company">Select company first</h4>
         </form>
         <div className="bottom">
-          <h3 className="forgot-password">Forgot your password?</h3>
-          <h3 className="no-account">Don't have an account?</h3>
-          <h5 className="no-account">App created by Amaan Javed</h5>
+          <h3>Forgot your password?</h3>
+          <h3>Haven't signed up yet? Register here.</h3>
+          <h3
+            style={{ marginTop: "50px", fontSize: "10px", fontWeight: "300" }}
+          >
+            App created by Amaan Javed
+          </h3>
         </div>
       </div>
       <div className="image-side"></div>

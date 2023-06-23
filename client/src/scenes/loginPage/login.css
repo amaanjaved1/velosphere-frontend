@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
 
+:root {
+  --gray: #3e3e3e;
+  --scotiabank: #980a0e;
+  --tangerine: #fe793e;
+  --mdfinancial: #0a085b;
+}
+
+h3 {
+  color: white;
+  font-size: 0.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 .login {
   min-width: 100vw;
   min-height: 100vh;
@@ -43,11 +60,11 @@
 
 .icon {
   width: 65px;
-  height: 60px;
-  background-color: red;
+  height: 65px;
+  background-color: var(--gray);
   border-radius: 23px;
-  margin-top: 25px;
-  padding: 5px;
+  margin-top: 30px;
+  padding: 10px;
 }
 
 .title {
@@ -77,9 +94,73 @@
 .slogan {
   font-size: 0.9rem;
   font-family: "Inter", sans-serif;
-  font-weight: 300;
-  margin-bottom: 25px;
+  font-weight: 500;
+  margin-top: 15px;
+  margin-bottom: 35px;
   letter-spacing: 0.1rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-dropdown {
+  width: 75%;
+  height: 60px;
+  background-color: var(--gray);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.form-entry {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-bottom: 25px;
+}
+
+.label {
+  color: #575758;
+  font-size: 0.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.input-content {
+  background-color: #262629;
+  border-radius: 10px;
+  height: 30px;
+  color: #575758;
+  font-size: 0.8rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  padding-left: 10px;
+}
+
+.submit-button {
+  width: 50%;
+  height: 50px;
+  background-color: var(--gray);
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.bottom {
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 680px) {
