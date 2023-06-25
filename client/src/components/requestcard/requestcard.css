@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --gray: #3e3e3e;
+  --scotiabank: #980a0e;
+  --tangerine: #fe793e;
+  --mdfinancial: #0a085b;
+}
+
+.request-card-grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.request-card-container {
+  width: 320px;
+  height: 180px;
+  background: linear-gradient(
+    142deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.26) 0.01%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  display: flex;
+  flex-direction: row;
+  border-radius: 30px;
+}
+
+.request-card-left {
+  width: 105px;
+}
+
+.request-card-right {
+  width: 215px;
+}
+
+.request-card-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-left: 12px;
+  margin-top: 12px;
+  background-size: cover;
+  background-image: url("../../../public/profile-photo.jpg");
+  border: 1px solid gray;
+}
+
+.request-card-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  font-size: 1.7em;
+  padding-top: 13px;
+  padding-right: 13px;
+}
+
+.request-card-company {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  font-size: 1.2em;
+  margin-top: 7px;
+  color: var(--scotiabank);
+  padding-right: 13px;
+}
+
+.request-card-program {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  font-size: 1em;
+  margin-top: 3px;
+  color: white;
+  padding-right: 13px;
+}
+
+.request-card-hr {
+  margin-top: 15px;
+  margin-right: 13px;
+  margin-bottom: 20px;
+}
+
+.request-card-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-right: 13px;
+}
+
+.request-card-accept {
+  width: 90px;
+  height: 30px;
+  background-color: var(--scotiabank);
+  border-radius: 12px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 0.9em;
+  padding: 2px;
+}
+
+.request-card-decline {
+  width: 90px;
+  height: 30px;
+  background-color: #256c0d;
+  border-radius: 12px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 0.9em;
+  padding: 2px;
+}
