@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.grid-root-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  width: 80vw;
+  display: grid;
+  grid-template-rows: 250px 250px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 6px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1170px) {
+  .grid-container {
+    grid-template-rows: 250px 250px 250px;
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .grid-container {
+    grid-template-rows: 250px 250px 250px 250px 250px 250px;
+    grid-template-columns: 1fr;
+  }
+}

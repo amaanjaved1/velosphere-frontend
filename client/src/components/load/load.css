@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.load-more-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.load-more-button {
+  width: 250px;
+  height: 40px;
+  border-radius: 35px;
+  border: 1px solid #000;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.load-more-icon {
+  background-color: black;
+  border-radius: 30px;
+  width: 20px;
+  height: 20px;
+}
+
+.load-more-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: black;
+}

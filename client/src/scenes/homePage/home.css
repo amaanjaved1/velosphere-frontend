@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --search-button-background: #ede5ff;
+}
+
+.home-main-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-title-text {
+  font-size: 3.4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  padding-right: 15px;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+.home-title-com {
+  align-self: flex-end;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 3px;
+  border-radius: 7px;
+  color: black;
+}
+
+.main-search {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 100px;
+  margin-top: 40px;
+}
+
+.main-search-first {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.main-search-second {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-option-dropdown {
+  color: gray;
+}
+
+.main-search-by {
+  height: 100%;
+  width: 50%;
+  border-radius: 15px;
+  background-color: var(--search-button-background);
+  max-width: 500px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: black;
+  padding-left: 10px;
+}
+
+.main-filter-by {
+  height: 100%;
+  width: 20%;
+  border-radius: 15px;
+  background-color: var(--search-button-background);
+  max-width: 200px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: black;
+  padding-left: 10px;
+  margin-right: 10px;
+}
+
+.main-search-by-content-input {
+  height: 100%;
+  width: 75%;
+  border-radius: 15px;
+  background-color: var(--search-button-background);
+  max-width: 700px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  padding-left: 10px;
+  color: black;
+}
+
+#home-recommendation-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 376px) {
+  .main-search-by {
+    font-size: 15px;
+    padding-left: 3px;
+  }
+
+  .main-filter-by {
+    font-size: 15px;
+    padding-left: 3px;
+  }
+
+  .home-title-text {
+    font-size: 2.8rem;
+  }
+}

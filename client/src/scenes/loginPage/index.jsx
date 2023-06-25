@@ -50,12 +50,16 @@ export const LoginPage = () => {
           </button>
         </form>
         <div className="bottom">
-          <h3>Forgot your password?</h3>
-          <h3>Haven't signed up yet? Register here.</h3>
+          <h3 style={{ fontWeight: "700" }}>Forgot your password?</h3>
+          <h3>
+            Haven't signed up yet?
+            <span style={{ fontWeight: "700" }}> Register here.</span>
+          </h3>
           <h3
             style={{ marginTop: "50px", fontSize: "10px", fontWeight: "300" }}
           >
-            App created by Amaan Javed
+            App created by{" "}
+            <a href="https://www.linkedin.com/in/amaan-javed/">Amaan Javed</a>
           </h3>
         </div>
       </div>

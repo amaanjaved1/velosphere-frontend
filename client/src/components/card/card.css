@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --gray: #3e3e3e;
+  --scotiabank: #980a0e;
+  --tangerine: #fe793e;
+  --mdfinancial: #0a085b;
+}
+
+.card {
+  height: 200px;
+  width: 300px;
+  border-radius: 30px;
+  background: linear-gradient(
+    142deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.26) 0.01%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+}
+
+.card-left {
+  width: 50%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-container {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #000;
+  margin-left: 12px;
+  margin-top: 12px;
+  background-size: cover;
+  background-image: url("../../../public/profile-photo.jpg");
+  border: 1px solid gray;
+}
+
+.card-tags {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.term-tag {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  color: white;
+  background-color: var(--scotiabank);
+  margin-right: 5em;
+  margin-bottom: 10px;
+  padding-top: 4px;
+  border-radius: 16px;
+  width: 75px;
+  height: 25px;
+  text-align: center;
+}
+
+.connection-tag {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  color: white;
+  background-color: var(--scotiabank);
+  margin-right: 5em;
+  margin-bottom: 10px;
+  padding-top: 4px;
+  border-radius: 16px;
+  width: 75px;
+  height: 25px;
+  text-align: center;
+}
+
+.card-right {
+  width: 50%;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.right-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  font-size: 1.7em;
+}
+
+.right-company {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  font-size: 1em;
+  margin-top: 20px;
+  color: var(--scotiabank);
+}
+
+.right-program {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  text-align: right;
+  font-size: 0.8em;
+  margin-top: 3px;
+  color: white;
+}
+
+.right-loc {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  text-align: right;
+  font-size: 0.6em;
+  margin-top: 20px;
+  color: white;
+}
+
+.right-school {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  text-align: right;
+  font-size: 0.6em;
+  margin-top: 3px;
+  color: white;
+}
