@@ -4,8 +4,8 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  padding-bottom: 50px;
 }
 
 .load-more-button {

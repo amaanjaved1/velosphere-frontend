@@ -114,7 +114,7 @@ export const HomePage = () => {
           />
         </div>
       </form>
-      <h2 id="home-recommendation-header">Recommended for you...</h2>
+      <h2 id="home-recommendation-header">Recommended for you</h2>
       <Grid />
       <LoadButton />
     </div>

@@ -29,3 +29,10 @@ h1 {
 * {
   color: whitesmoke;
 }
+
+@media only screen and (max-width: 1200px) {
+  .app {
+    background-image: none;
+    background-color: black;
+  }
+}
