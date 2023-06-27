@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+#registration-welcome {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.regpag-container {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.regpag-menu {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 65%;
+  min-width: 310px;
+  padding: 5px;
+}
+
+.regpag-pagenum {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+.regpag-pagenum-selected {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1.2em;
+  color: #ff46c0;
+}
+
+.registration-page-desc {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  color: white;
+}
+
+.registration-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.registration-confirmation-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.registration-confirmation {
+  width: 90%;
+  padding: 30px;
+  background-color: #262629;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+}
+
+.registration-confirmation h4 {
+  color: #575758;
+  font-size: 1em;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+}
+
+.registration-confirmation h4 span {
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0px;
+}
+
+@media screen and (max-width: 360px) {
+  #registration-welcome {
+    font-size: 1.1em;
+  }
+
+  .registration-page-desc {
+    font-size: 0.9em;
+  }
+}

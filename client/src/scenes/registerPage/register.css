@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.register-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.register-bg {
+  width: 50%;
+  /* Black and white gradient */
+  background-image: url("../../../public/bw-gradient.png");
+
+  /* Tangerine gradient */
+  /* background-image: url("../../../public/tangerine-gradient.png"); */
+
+  /* Scotiabank gradient  */
+  /* background-image: url("../../../public/scotiabank-gradient.png"); */
+
+  /* MD Financial gradient */
+  /* background-image: url("../../../public/mdfinancial-gradient.png"); */
+
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.register-form {
+  background-color: black;
+  width: 50%;
+  max-width: 800px;
+}
+
+.register-title-text {
+  font-size: 3.4rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 680px) {
+  .register-bg {
+    display: none;
+  }
+
+  .register-form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
