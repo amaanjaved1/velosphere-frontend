@@ -23,6 +23,13 @@ export const Page3 = () => {
           placeholder="i.e. Software Developer Intern"
         />
         <InputFieldButton
+          type="internTeam"
+          name="internTeam"
+          id="internTeam"
+          label="Intern Team"
+          placeholder="i.e. ISS"
+        />
+        <InputFieldButton
           type="location"
           name="location"
           id="location"

@@ -13,7 +13,7 @@ export const Page6 = () => {
           type="meInOneSentence"
           name="meInOneSentence"
           id="meInOneSentence"
-          label="Describe Yourself In One Sentence!"
+          label="Describe Yourself In One Sentence! (150 char max)"
           placeholder="i.e. I enjoy playing soccer and tennis on the weekends!"
         />
         <InputFieldButton

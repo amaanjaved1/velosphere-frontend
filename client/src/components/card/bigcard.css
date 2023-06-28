@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
 
-:root {
-  --gray: #3e3e3e;
-  --scotiabank: #980a0e;
-  --tangerine: #fe793e;
-  --mdfinancial: #0a085b;
-}
-
-.card {
-  height: 200px;
-  width: 300px;
+.big-card {
+  height: 250px;
+  width: 500px;
   border-radius: 30px;
   background: linear-gradient(
     142deg,
@@ -20,9 +13,10 @@
   display: flex;
   flex-direction: row;
   border: 1px solid gray;
+  margin-top: 30px;
 }
 
-.card-left {
+.big-card-left {
   width: 50%;
   border-radius: 30px;
   display: flex;
@@ -30,101 +24,101 @@
   justify-content: space-between;
 }
 
-.image-container {
-  width: 90px;
-  height: 90px;
+.big-image-container {
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background-color: #000;
-  margin-left: 12px;
+  margin-left: 25px;
   margin-top: 12px;
   background-size: cover;
   background-image: url("../../../public/profile-photo.jpg");
   border: 1px solid gray;
 }
 
-.card-tags {
-  padding-left: 20px;
+.big-card-tags {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 30px;
 }
 
-.term-tag {
+.big-term-tag {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: white;
   background-color: var(--scotiabank);
-  margin-right: 5em;
   margin-bottom: 10px;
-  padding-top: 4px;
+  margin-left: 25px;
+  padding-top: 8px;
   border-radius: 16px;
-  width: 75px;
-  height: 25px;
+  width: 125px;
+  height: 35px;
   text-align: center;
 }
 
-.connection-tag {
+.big-connection-tag {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: white;
   background-color: var(--scotiabank);
-  margin-right: 5em;
-  margin-bottom: 10px;
-  padding-top: 4px;
+  margin-bottom: 20px;
+  padding-top: 8px;
   border-radius: 16px;
-  width: 75px;
-  height: 25px;
+  margin-left: 25px;
+  width: 125px;
+  height: 35px;
   text-align: center;
 }
 
-.card-right {
+.big-card-right {
   width: 50%;
   padding: 10px;
   padding-right: 15px;
   border-radius: 30px;
 }
 
-.right-title {
+.big-right-title {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   text-align: right;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-.right-company {
+.big-right-company {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   text-align: right;
-  font-size: 1em;
+  font-size: 1.3em;
   margin-top: 15px;
   color: var(--scotiabank);
 }
 
-.right-program {
+.big-right-program {
   font-family: "Inter", sans-serif;
   font-weight: 800;
   text-align: right;
-  font-size: 0.8em;
+  font-size: 1.1em;
   margin-top: 3px;
   color: white;
 }
 
-.right-loc {
+.big-right-loc {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   text-align: right;
-  font-size: 0.7em;
-  margin-top: 30px;
+  font-size: 0.9em;
+  margin-top: 45px;
   color: white;
 }
 
-.right-school {
+.big-right-school {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   text-align: right;
-  font-size: 0.7em;
+  font-size: 0.9em;
   margin-top: 3px;
   color: white;
 }

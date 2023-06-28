@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.editnav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editnav-message {
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 700;
+  text-transform: capitalize;
+  width: 170px;
+  backdrop-filter: blur(50px);
+  height: 30px;
+  border-radius: 16px;
+}

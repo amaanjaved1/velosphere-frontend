@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar } from "components/navbar/navbar";
 import { LoadButton } from "components/load/load";
 import { Grid } from "components/grid/grid";
-import { BsFillPersonFill } from "react-icons/bs";
 import "./home.css";
 
 export const HomePage = () => {
