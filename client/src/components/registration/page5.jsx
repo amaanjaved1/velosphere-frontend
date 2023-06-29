@@ -2,7 +2,6 @@ import React from "react";
 import "./registration.css";
 import { NextButton } from "../../components/buttons/next";
 import { InputFieldButton } from "../../components/buttons/input";
-import { red } from "@mui/material/colors";
 
 export const Page5 = () => {
   return (

@@ -40,6 +40,7 @@ nav {
   display: flex;
   align-items: center;
   margin-left: auto; /* Add this property */
+  z-index: 100;
 }
 
 nav a {

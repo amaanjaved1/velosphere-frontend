@@ -96,7 +96,9 @@
 .registration-input-content::placeholder {
   font-weight: 300;
   font-size: 1em;
-  color: #575758;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .large-registration-input-content {
@@ -110,10 +112,13 @@
   padding-left: 10px;
   padding-top: 10px;
   color: antiquewhite;
+  border: none;
 }
 
 .large-registration-input-content::placeholder {
   font-weight: 300;
   font-size: 1em;
-  color: #575758;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

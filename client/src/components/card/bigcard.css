@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: row;
   border: 1px solid gray;
-  margin-top: 30px;
 }
 
 .big-card-left {

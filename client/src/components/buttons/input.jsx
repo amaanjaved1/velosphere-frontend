@@ -2,7 +2,7 @@ import React from "react";
 import "./buttons.css";
 
 export const InputFieldButton = (props) => {
-  const { type, name, id, label, placeholder } = props;
+  const { type, name, id, label, placeholder, value } = props;
   return (
     <div>
       <div className="registration-form-entry">
@@ -14,6 +14,7 @@ export const InputFieldButton = (props) => {
           name={name}
           id={id}
           placeholder={placeholder}
+          value={value}
           className="registration-input-content"
         />
       </div>

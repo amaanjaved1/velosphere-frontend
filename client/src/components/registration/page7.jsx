@@ -1,8 +1,6 @@
 import React from "react";
 import "./registration.css";
 import { NextButton } from "../../components/buttons/next";
-import { InputFieldButton } from "../../components/buttons/input";
-import { LargeInputFieldButton } from "components/buttons/largeinput";
 
 export const Page7 = () => {
   return (

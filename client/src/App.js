@@ -6,6 +6,7 @@ import { RegisterPage } from "scenes/registerPage";
 import { ConnectionsPage } from "scenes/connectionsPage";
 import { ProfilePage } from "scenes/profilePage";
 import { RequestsPage } from "scenes/requestsPage";
+import { SearchResultsPage } from "scenes/searchResultsPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/connections" element={<ConnectionsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/requests" element={<RequestsPage />} />
+          <Route path="/search" element={<SearchResultsPage />} />
         </Routes>
       </BrowserRouter>
     </div>
