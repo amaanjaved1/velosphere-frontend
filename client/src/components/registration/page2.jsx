@@ -1,9 +1,8 @@
 import React from "react";
 import "./registration.css";
-import { NextButton } from "../../components/buttons/next";
 import { InputFieldButton } from "../../components/buttons/input";
 
-export const Page2 = () => {
+export const Page2 = ({ inputProps }) => {
   return (
     <div>
       <h2 className="registration-page-desc">User Information:</h2>
@@ -14,6 +13,8 @@ export const Page2 = () => {
           id="firstName"
           label="First Name"
           placeholder="i.e. Amaan"
+          content={inputProps.firstNameKey.content}
+          valuefunction={inputProps.firstNameKey.valuefunction}
         />
         <InputFieldButton
           type="lastName"
@@ -21,13 +22,8 @@ export const Page2 = () => {
           id="lastName"
           label="Last Name"
           placeholder="i.e. Javed"
-        />
-        <InputFieldButton
-          type="username"
-          name="username"
-          id="username"
-          label="Username"
-          placeholder="i.e. amaanjaved123"
+          content={inputProps.lastNameKey.content}
+          valuefunction={inputProps.lastNameKey.valuefunction}
         />
         <InputFieldButton
           type="password"
@@ -35,9 +31,10 @@ export const Page2 = () => {
           id="password"
           label="Password"
           placeholder="i.e. FolW!MYlinkdIN"
+          content={inputProps.passwordKey.content}
+          valuefunction={inputProps.passwordKey.valuefunction}
         />
       </div>
-      <NextButton message="Next" />
     </div>
   );
 };

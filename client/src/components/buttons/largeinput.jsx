@@ -2,20 +2,21 @@ import React from "react";
 import "./buttons.css";
 
 export const LargeInputFieldButton = (props) => {
-  const { type, name, id, label, placeholder, value } = props;
   return (
     <div>
       <div className="registration-form-entry">
-        <label htmlFor="email" className="registration-label">
-          {label}
+        <label htmlFor={props.name} className="registration-label">
+          {props.label}
         </label>
         <textarea
-          type={type}
-          name={name}
-          id={id}
-          placeholder={placeholder}
-          value={value}
+          type={props.type}
+          name={props.name}
+          id={props.id}
+          placeholder={props.placeholder}
+          value={props.content}
           className="large-registration-input-content"
+          maxLength={150}
+          onChange={(e) => props.valuefunction(e.target.value)}
         />
       </div>
     </div>

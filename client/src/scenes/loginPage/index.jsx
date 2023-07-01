@@ -15,12 +15,6 @@ export const LoginPage = () => {
           <h2 className="slogan">Unite. Collaborate. Thrive.</h2>
         </div>
         <form className="form-content">
-          <select name="company" id="company" className="input-dropdown">
-            <option value="scotiabank">Scotiabank</option>
-            <option value="tangerine">Tangerine</option>
-            <option value="mdfinancial">MD Financial</option>
-          </select>
-
           <div className="form-entry">
             <label htmlFor="email" className="label">
               Enter email:

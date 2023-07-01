@@ -2,28 +2,44 @@
 
 .register-page {
   width: 100vw;
-  height: 100vh;
+  height: 135vh;
   display: flex;
   flex-direction: row;
 }
 
-.register-bg {
+.default-background {
   width: 50%;
   /* Black and white gradient */
   background-image: url("../../../public/bw-gradient.png");
-
-  /* Tangerine gradient */
-  /* background-image: url("../../../public/tangerine-gradient.png"); */
-
-  /* Scotiabank gradient  */
-  /* background-image: url("../../../public/scotiabank-gradient.png"); */
-
-  /* MD Financial gradient */
-  /* background-image: url("../../../public/mdfinancial-gradient.png"); */
-
   background-size: cover;
   background-position: center;
+  flex-grow: 1;
+}
+
+.tangerine-background {
   width: 50%;
+  /* Tangerine gradient */
+  background-image: url("../../../public/tangerine-gradient.png");
+  background-size: cover;
+  background-position: center;
+  flex-grow: 1;
+}
+
+.scotiabank-background {
+  width: 50%;
+  /* Scotiabank gradient  */
+  background-image: url("../../../public/scotiabank-gradient.png");
+  background-size: cover;
+  background-position: center;
+  flex-grow: 1;
+}
+
+.mdfinancial-background {
+  width: 50%;
+  /* MD Financial gradient */
+  background-image: url("../../../public/mdfinancial-gradient.png");
+  background-size: cover;
+  background-position: center;
   flex-grow: 1;
 }
 
@@ -43,7 +59,19 @@
 }
 
 @media only screen and (max-width: 680px) {
-  .register-bg {
+  .scotiabank-background {
+    display: none;
+  }
+
+  .mdfinancial-background {
+    display: none;
+  }
+
+  .tangerine-background {
+    display: none;
+  }
+
+  .default-background {
     display: none;
   }
 

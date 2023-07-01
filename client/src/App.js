@@ -7,6 +7,7 @@ import { ConnectionsPage } from "scenes/connectionsPage";
 import { ProfilePage } from "scenes/profilePage";
 import { RequestsPage } from "scenes/requestsPage";
 import { SearchResultsPage } from "scenes/searchResultsPage";
+import { RegistrationSuccessPage } from "scenes/registrationSuccess";
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route
+            path="/registration-success"
+            element={<RegistrationSuccessPage />}
+          />
           <Route path="/" element={<HomePage />} />
           <Route path="/connections" element={<ConnectionsPage />} />
           <Route path="/profile" element={<ProfilePage />} />

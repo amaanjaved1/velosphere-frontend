@@ -21,6 +21,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   user: null,
   token: null,
+  company: null,
+  color: null,
 };
 
 export const authSlice = createSlice({
@@ -42,8 +44,13 @@ export const authSlice = createSlice({
         console.error("Not logged in.");
       }
     },
+    setColorTheme: (state, action) => {
+      state.color = action.payload.color;
+      state.company = action.payload.company;
+    },
   },
 });
 
-export const { setLogin, setLogout, setConnections } = authSlice.actions;
+export const { setLogin, setLogout, setConnections, setColorTheme } =
+  authSlice.actions;
 export default authSlice.reducer;

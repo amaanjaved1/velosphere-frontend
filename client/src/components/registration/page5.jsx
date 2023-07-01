@@ -1,15 +1,14 @@
 import React from "react";
 import "./registration.css";
-import { NextButton } from "../../components/buttons/next";
 import { InputFieldButton } from "../../components/buttons/input";
 
-export const Page5 = () => {
+export const Page5 = ({ inputProps }) => {
   return (
     <div>
       <h2 className="registration-page-desc" style={{ marginBottom: "5px" }}>
         Link Your Socials:{" "}
       </h2>
-      <h3 id="registration-not-applicable">(Leave blank if n/a)</h3>
+      <h3 id="registration-not-applicable">(Type n/a if not applicable)</h3>
       <div className="registration-content-container">
         <InputFieldButton
           type="twitter"
@@ -17,6 +16,8 @@ export const Page5 = () => {
           id="twitter"
           label="Twitter"
           placeholder="Link to your Twitter account"
+          content={inputProps.twitterKey.content}
+          valuefunction={inputProps.twitterKey.valuefunction}
         />
         <InputFieldButton
           type="LinkedIn"
@@ -24,6 +25,8 @@ export const Page5 = () => {
           id="LinkedIn"
           label="LinkedIn"
           placeholder="Link to your LinkedIn account"
+          content={inputProps.linkedinKey.content}
+          valuefunction={inputProps.linkedinKey.valuefunction}
         />
         <InputFieldButton
           type="Facebook"
@@ -31,6 +34,8 @@ export const Page5 = () => {
           id="Facebook"
           label="Facebook"
           placeholder="Link to your Facebook account"
+          content={inputProps.facebookKey.content}
+          valuefunction={inputProps.facebookKey.valuefunction}
         />
         <InputFieldButton
           type="GitHub"
@@ -38,9 +43,10 @@ export const Page5 = () => {
           id="GitHub"
           label="GitHub"
           placeholder="Link to your GitHub account"
+          content={inputProps.githubKey.content}
+          valuefunction={inputProps.githubKey.valuefunction}
         />
       </div>
-      <NextButton message="Next" />
     </div>
   );
 };

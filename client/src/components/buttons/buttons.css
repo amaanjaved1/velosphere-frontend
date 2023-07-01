@@ -22,6 +22,7 @@
   font-size: 1.3em;
   border-radius: 10px;
   background-color: #0a085b;
+  cursor: pointer;
 }
 
 .submit-button-container {
@@ -52,7 +53,6 @@
 .dropdown-button {
   width: 250px;
   height: 50px;
-  background-color: #0a085b;
   border-radius: 10px;
   margin-bottom: 15px;
   font-size: 1rem;
@@ -91,6 +91,7 @@
   font-weight: 700;
   padding-left: 10px;
   color: antiquewhite;
+  border: none;
 }
 
 .registration-input-content::placeholder {

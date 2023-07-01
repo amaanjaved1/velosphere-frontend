@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.registration-successful-main {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.registration-successful-message {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.registration-successful-bottom {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#registration-successful-link {
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 500;
+  text-decoration: underline;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}

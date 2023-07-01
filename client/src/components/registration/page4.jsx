@@ -1,9 +1,8 @@
 import React from "react";
 import "./registration.css";
-import { NextButton } from "../../components/buttons/next";
 import { InputFieldButton } from "../../components/buttons/input";
 
-export const Page4 = () => {
+export const Page4 = ({ inputProps }) => {
   return (
     <div>
       <h2 className="registration-page-desc">School Information:</h2>
@@ -14,6 +13,8 @@ export const Page4 = () => {
           id="educationalInstitution"
           label="Educational Institution"
           placeholder="i.e. Queen's University"
+          content={inputProps.educationalInstitutionKey.content}
+          valuefunction={inputProps.educationalInstitutionKey.valuefunction}
         />
         <InputFieldButton
           type="schoolProgram"
@@ -21,9 +22,10 @@ export const Page4 = () => {
           id="schoolProgram"
           label="School Program"
           placeholder="i.e. Computer Science"
+          content={inputProps.schoolProgramKey.content}
+          valuefunction={inputProps.schoolProgramKey.valuefunction}
         />
       </div>
-      <NextButton message="Next" />
     </div>
   );
 };
