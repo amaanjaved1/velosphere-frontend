@@ -8,6 +8,7 @@ import { ProfilePage } from "scenes/profilePage";
 import { RequestsPage } from "scenes/requestsPage";
 import { SearchResultsPage } from "scenes/searchResultsPage";
 import { RegistrationSuccessPage } from "scenes/registrationSuccess";
+import { PrivateRoutes } from "./private";
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
             path="/registration-success"
             element={<RegistrationSuccessPage />}
           />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/connections" element={<ConnectionsPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/requests" element={<RequestsPage />} />
-          <Route path="/search" element={<SearchResultsPage />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/connections" element={<ConnectionsPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/requests" element={<RequestsPage />} />
+            <Route path="/search" element={<SearchResultsPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

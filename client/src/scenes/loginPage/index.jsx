@@ -90,8 +90,14 @@ export const LoginPage = () => {
       });
 
       if (response.ok) {
-        const { token } = await response.json();
-        dispatch(setLogin({ user: email, token: token }));
+        const { token, expirationDate } = await response.json();
+        dispatch(
+          setLogin({
+            user: email,
+            token: token,
+            expirationDate: expirationDate,
+          })
+        );
         navigate("/");
       } else {
         window.alert(`Request failed: ${response.status}`);

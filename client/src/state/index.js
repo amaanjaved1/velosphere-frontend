@@ -21,6 +21,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   user: null,
   token: null,
+  expirationDate: null,
   company: null,
   color: null,
 };
@@ -32,10 +33,12 @@ export const authSlice = createSlice({
     setLogin: (state, action) => {
       state.user = action.payload.user;
       state.token = action.payload.token;
+      state.expirationDate = action.payload.expirationDate;
     },
     setLogout: (state) => {
       state.user = null;
       state.token = null;
+      state.expirationDate = null;
     },
     setConnections: (state, action) => {
       if (state.user) {
