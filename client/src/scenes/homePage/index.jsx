@@ -3,10 +3,14 @@ import { Navbar } from "components/navbar/navbar";
 import { LoadButton } from "components/load/load";
 import { Grid } from "components/grid/grid";
 import "./home.css";
+import { useSelector } from "react-redux";
 
 export const HomePage = () => {
+  const user = useSelector((state) => state.user);
+
   return (
     <div>
+      {user}
       <Navbar />
       <div className="home-main-header">
         <div className="home-title">
