@@ -39,6 +39,8 @@ export const authSlice = createSlice({
       state.user = null;
       state.token = null;
       state.expirationDate = null;
+      state.company = null;
+      state.color = null;
     },
     setConnections: (state, action) => {
       if (state.user) {

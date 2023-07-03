@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.edit-view-outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-view-container {
+  width: 500px;
+  border-radius: 30px;
+  background: linear-gradient(
+    142deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.26) 0.01%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+  backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+
+#edit-view-heading {
+  margin-bottom: 20px;
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+
+.edit-view-submit {
+  margin-bottom: 40px;
+  width: 200px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: #980a0e;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 518px) {
+  .edit-view-container {
+    width: 300px;
+  }
+}

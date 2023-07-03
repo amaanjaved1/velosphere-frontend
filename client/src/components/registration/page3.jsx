@@ -30,8 +30,8 @@ export const Page3 = ({ inputProps }) => {
           type="internTeam"
           name="internTeam"
           id="internTeam"
-          label="Intern Team"
-          placeholder="i.e. ISS"
+          label="Service Line"
+          placeholder="i.e. CID&A"
           content={inputProps.internTeamKey.content}
           valuefunction={inputProps.internTeamKey.valuefunction}
         />
@@ -39,8 +39,8 @@ export const Page3 = ({ inputProps }) => {
           type="location"
           name="location"
           id="location"
-          label="Location (Please use city)"
-          placeholder="i.e. Toronto"
+          label="Office Location (please use format below)"
+          placeholder="i.e. 44 King Street West, Toronto, ON"
           content={inputProps.locationKey.content}
           valuefunction={inputProps.locationKey.valuefunction}
         />

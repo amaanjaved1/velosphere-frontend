@@ -1,17 +1,19 @@
 import React from "react";
 import "./edit.css";
 
-export const EditNav = (props) => {
+export const EditNav = ({ message, onClick }) => {
   return (
     <div className="edit-nav-container-outer">
       <div className="editnav-container">
         <button
           className="editnav-message"
           style={{
-            backgroundColor: props.message === "Edit" ? "#980a0e" : "#ffffff26",
+            backgroundColor: message === "Edit" ? "#980a0e" : "#ffffff26",
+            cursor: "pointer",
           }}
+          onClick={onClick}
         >
-          {props.message}
+          {message}
         </button>
       </div>
     </div>

@@ -24,7 +24,7 @@ function App() {
           <Route element={<PrivateRoutes />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/connections" element={<ConnectionsPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile/:profileEmail" element={<ProfilePage />} />
             <Route path="/requests" element={<RequestsPage />} />
             <Route path="/search" element={<SearchResultsPage />} />
           </Route>

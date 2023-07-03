@@ -1,19 +1,19 @@
 import React from "react";
 
-export const ProfileCareer = () => {
+export const ProfileCareer = ({ cardContent }) => {
   return (
     <div className="profile-career-content">
       <div className="profile-text">
-        <h1>Queen's University</h1>
+        <h1>{cardContent.educationalInstitution}</h1>
       </div>
       <div className="profile-text">
-        <h1>Computer Engineering</h1>
+        <h1>{cardContent.schoolProgram}</h1>
       </div>
       <div className="profile-text">
-        <h1>Data Science Intern</h1>
+        <h1>{cardContent.internPosition}</h1>
       </div>
       <div className="profile-text">
-        <h1>IT&S</h1>
+        <h1>{cardContent.internTeam}</h1>
       </div>
     </div>
   );
