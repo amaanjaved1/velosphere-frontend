@@ -64,21 +64,6 @@
   text-align: center;
 }
 
-.connection-tag {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 0.8em;
-  color: white;
-  background-color: var(--scotiabank);
-  margin-right: 5em;
-  margin-bottom: 10px;
-  padding-top: 4px;
-  border-radius: 16px;
-  width: 75px;
-  height: 25px;
-  text-align: center;
-}
-
 .card-right {
   width: 50%;
   padding: 10px;

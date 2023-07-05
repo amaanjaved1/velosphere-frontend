@@ -10,14 +10,20 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+// Own profile: cstate= false, sentby=false
+// Other profile:
+// Not connected: cstate="not connected", sentby=false
+// Pending: csate="pending", sentby=true/false
+// Connected: cstate="accepted", sentby=true/false
+
 export const ProfilePage = () => {
   const token = useSelector((state) => state.token);
   const email = useSelector((state) => state.user);
   const { profileEmail } = useParams();
   const [isMyProfile, setIsMyProfile] = useState(email === profileEmail);
-  console.log(isMyProfile);
   const [isEditing, setIsEditing] = useState(false);
   const [isAboutSection, setIsAboutSection] = useState(true);
+
   const getCard = async () => {
     try {
       const requestBody = { actionFrom: email };
@@ -59,6 +65,7 @@ export const ProfilePage = () => {
           pastTerms,
           isMyProfile,
           cstate,
+          sentby,
         } = await response.json();
 
         let cardContent = {
@@ -86,6 +93,7 @@ export const ProfilePage = () => {
           pastTerms: pastTerms,
           isMyProfile: isMyProfile,
           cstate: cstate,
+          sentby: sentby,
         };
 
         setCard(cardContent);
@@ -127,6 +135,7 @@ export const ProfilePage = () => {
             profileEmail={profileEmail}
             cardContent={card}
             isMyProfile={isMyProfile}
+            user={email}
           />
           <div className="profile-nav">
             <div

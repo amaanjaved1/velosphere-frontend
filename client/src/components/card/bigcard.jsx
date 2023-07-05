@@ -1,7 +1,8 @@
 import React from "react";
 import "./bigcard.css";
+import { ConnectTag } from "components/card/connecttag";
 
-export const BigCard = ({ cardContent, isMyProfile }) => {
+export const BigCard = ({ cardContent, isMyProfile, user }) => {
   return (
     <div className="big-card">
       <div className="big-card-left">
@@ -12,7 +13,11 @@ export const BigCard = ({ cardContent, isMyProfile }) => {
         <div className="big-card-tags">
           <div className="big-term-tag">{cardContent.currentTerm}</div>
           {isMyProfile === false ? (
-            <div className="big-connection-tag">Connect</div>
+            <ConnectTag
+              cstate={cardContent.cstate}
+              sentby={cardContent.sentby}
+              user={user}
+            />
           ) : null}
         </div>
       </div>
