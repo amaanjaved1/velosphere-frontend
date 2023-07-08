@@ -23,6 +23,8 @@ export const ProfilePage = () => {
   const [isMyProfile, setIsMyProfile] = useState(email === profileEmail);
   const [isEditing, setIsEditing] = useState(false);
   const [isAboutSection, setIsAboutSection] = useState(true);
+  const [cstate, setCState] = useState(false);
+  const [sentby, setSentBy] = useState(false);
 
   const getCard = async () => {
     try {
@@ -101,6 +103,9 @@ export const ProfilePage = () => {
         if (cstate === false) {
           setIsMyProfile(true);
         }
+
+        setCState(cstate);
+        setSentBy(sentby);
       } else {
         console.log(`Request failed: ${response.status}`);
       }
@@ -136,6 +141,8 @@ export const ProfilePage = () => {
             cardContent={card}
             isMyProfile={isMyProfile}
             user={email}
+            cstate={{ cstate, setCState }}
+            sentby={{ sentby, setSentBy }}
           />
           <div className="profile-nav">
             <div

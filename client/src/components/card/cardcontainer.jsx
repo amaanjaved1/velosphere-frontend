@@ -8,6 +8,8 @@ export const CardContainer = ({
   cardContent,
   isMyProfile,
   user,
+  cstate,
+  sentby,
 }) => {
   const isSmallScreen = useMediaQuery("(max-width: 518px)");
 
@@ -19,6 +21,8 @@ export const CardContainer = ({
           cardContent={cardContent}
           isMyProfile={isMyProfile}
           user={user}
+          cstate={cstate}
+          sentby={sentby}
         />
       ) : (
         <BigCard
@@ -26,6 +30,8 @@ export const CardContainer = ({
           cardContent={cardContent}
           isMyProfile={isMyProfile}
           user={user}
+          cstate={cstate}
+          sentby={sentby}
         />
       )}
     </>

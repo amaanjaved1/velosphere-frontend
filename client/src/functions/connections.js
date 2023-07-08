@@ -1,40 +1,135 @@
 // All functions related to connections
 
-export const sendConnection = async (actionFrom, actionTo) => {
+export const sendConnection = async (args) => {
   try {
-    console.log("sendConnection");
+    const { actionFrom, actionTo, token } = args;
+
+    const requestBody = {
+      actionFrom: actionFrom,
+      actionTo: actionTo,
+    };
+
+    const response = await fetch(
+      `http://localhost:5000/profile/send-connection/${actionTo}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
+
+    return response;
   } catch (err) {
     console.log(err);
   }
 };
 
-export const acceptConnection = async (actionFrom, actionTo) => {
+export const acceptConnection = async (args) => {
   try {
-    console.log("acceptConnection");
+    const { actionFrom, actionTo, token } = args;
+
+    const requestBody = {
+      actionFrom: actionFrom,
+      actionTo: actionTo,
+    };
+
+    const response = await fetch(
+      `http://localhost:5000/profile/accept-connection/${actionTo}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
+
+    return response;
   } catch (err) {
     console.log(err);
   }
 };
 
-export const cancelConnection = async (actionFrom, actionTo) => {
+export const cancelConnection = async (args) => {
   try {
-    console.log("cancelConnection");
+    const { actionFrom, actionTo, token } = args;
+
+    const requestBody = {
+      actionFrom: actionFrom,
+      actionTo: actionTo,
+    };
+
+    const response = await fetch(
+      `http://localhost:5000/profile/cancel-connection/${actionTo}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
+
+    return response;
   } catch (err) {
     console.log(err);
   }
 };
 
-export const denyConnection = async (actionFrom, actionTo) => {
+export const denyConnection = async (args) => {
   try {
-    console.log("denyConnection");
+    const { actionFrom, actionTo, token } = args;
+
+    const requestBody = {
+      actionFrom: actionFrom,
+      actionTo: actionTo,
+    };
+
+    const response = await fetch(
+      `http://localhost:5000/profile/deny-connection/${actionTo}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
+
+    return response;
   } catch (err) {
     console.log(err);
   }
 };
 
-export const removeConnection = async (actionFrom, actionTo) => {
+export const removeConnection = async (args) => {
   try {
-    console.log("removeConnection");
+    const { actionFrom, actionTo, token } = args;
+
+    const requestBody = {
+      actionFrom: actionFrom,
+      actionTo: actionTo,
+    };
+
+    const response = await fetch(
+      `http://localhost:5000/profile/remove-connection/${actionTo}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
+
+    return response;
   } catch (err) {
     console.log(err);
   }

@@ -2,7 +2,14 @@ import React from "react";
 import "./card.css";
 import { ConnectTag } from "components/card/connecttag";
 
-export const Card = ({ cardContent, isMyProfile, user }) => {
+export const Card = ({
+  cardContent,
+  isMyProfile,
+  user,
+  profileEmail,
+  cstate,
+  sentby,
+}) => {
   return (
     <div className="card">
       <div className="card-left">
@@ -14,9 +21,10 @@ export const Card = ({ cardContent, isMyProfile, user }) => {
           <div className="term-tag">{cardContent.currentTerm}</div>
           {isMyProfile === false ? (
             <ConnectTag
-              cstate={cardContent.cstate}
-              sentby={cardContent.sentby}
+              cstate={cstate}
               user={user}
+              profileEmail={profileEmail}
+              sentby={sentby}
             />
           ) : null}
         </div>

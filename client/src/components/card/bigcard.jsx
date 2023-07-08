@@ -2,7 +2,14 @@ import React from "react";
 import "./bigcard.css";
 import { ConnectTag } from "components/card/connecttag";
 
-export const BigCard = ({ cardContent, isMyProfile, user }) => {
+export const BigCard = ({
+  cardContent,
+  isMyProfile,
+  user,
+  profileEmail,
+  cstate,
+  sentby,
+}) => {
   return (
     <div className="big-card">
       <div className="big-card-left">
@@ -14,9 +21,10 @@ export const BigCard = ({ cardContent, isMyProfile, user }) => {
           <div className="big-term-tag">{cardContent.currentTerm}</div>
           {isMyProfile === false ? (
             <ConnectTag
-              cstate={cardContent.cstate}
-              sentby={cardContent.sentby}
+              cstate={cstate}
+              sentby={sentby}
               user={user}
+              profileEmail={profileEmail}
             />
           ) : null}
         </div>
