@@ -25,6 +25,7 @@ export const ProfilePage = () => {
   const [isAboutSection, setIsAboutSection] = useState(true);
   const [cstate, setCState] = useState(false);
   const [sentby, setSentBy] = useState(false);
+  const [card, setCard] = useState({});
 
   const getCard = async () => {
     try {
@@ -106,6 +107,7 @@ export const ProfilePage = () => {
 
         setCState(cstate);
         setSentBy(sentby);
+        return true;
       } else {
         console.log(`Request failed: ${response.status}`);
       }
@@ -118,10 +120,15 @@ export const ProfilePage = () => {
     setIsEditing(!isEditing);
   };
 
-  const [card, setCard] = useState({});
-
   useEffect(() => {
-    getCard();
+    const fetchData = async () => {
+      try {
+        await getCard();
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
   }, [isEditing]);
 
   return (
@@ -133,7 +140,12 @@ export const ProfilePage = () => {
         <div style={{ marginTop: "25px" }}></div>
       )}
       {isEditing ? (
-        <EditView />
+        <EditView
+          cardContent={card}
+          user={email}
+          token={token}
+          setIsEditing={setIsEditing}
+        />
       ) : (
         <div className="profile-view-container">
           <CardContainer

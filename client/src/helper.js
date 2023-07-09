@@ -18,3 +18,31 @@ export const getCurrentTerm = () => {
 
   return termString;
 };
+
+export const validateTerm = (term) => {
+  // Make sure that the term is in the format of "S20" or "F20" or "W20"
+  if (!/^[SFW]\d{2}$/.test(term)) {
+    return false;
+  }
+  return true;
+};
+
+export const validatePastTerms = (pastTerms) => {
+  // pastTerms is a string that is in the format "S20,F20,W20" or they could have spaces in between.
+  // return an array of terms if valid, otherwise return false
+  if (pastTerms === "" || pastTerms === "n/a") {
+    return [];
+  }
+
+  const terms = String(pastTerms).split(",");
+  const validTerms = [];
+
+  for (let i = 0; i < terms.length; i++) {
+    if (!validateTerm(terms[i])) {
+      return false;
+    }
+    validTerms.push(terms[i]);
+  }
+
+  return validTerms;
+};
