@@ -45,6 +45,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 1em;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 518px) {
