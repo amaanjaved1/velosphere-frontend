@@ -26,6 +26,8 @@ export const ProfilePage = () => {
   const [cstate, setCState] = useState(false);
   const [sentby, setSentBy] = useState(false);
   const [card, setCard] = useState({});
+  const [company, setCompany] = useState("");
+  const [color, setColor] = useState("#980a0e");
 
   const getCard = async () => {
     try {
@@ -107,6 +109,8 @@ export const ProfilePage = () => {
 
         setCState(cstate);
         setSentBy(sentby);
+        setCompany(company);
+        getColor();
         return true;
       } else {
         console.log(`Request failed: ${response.status}`);
@@ -115,6 +119,20 @@ export const ProfilePage = () => {
       console.log(err);
     }
   };
+
+  const getColor = () => {
+    if (company === "mdfinancial") {
+      setColor("#0a085b");
+    } else if (company === "tangerine") {
+      setColor("#fe793e");
+    } else {
+      setColor("#980a0e");
+    }
+  };
+
+  useEffect(() => {
+    getColor();
+  }, [company]);
 
   const toggleEdit = () => {
     setIsEditing(!isEditing);
@@ -129,13 +147,18 @@ export const ProfilePage = () => {
       }
     };
     fetchData();
+    getColor();
   }, [isEditing]);
 
   return (
     <div>
       <Navbar />
       {isMyProfile ? (
-        <EditNav message={isEditing ? "Back" : "Edit"} onClick={toggleEdit} />
+        <EditNav
+          message={isEditing ? "Back" : "Edit"}
+          color={color}
+          onClick={toggleEdit}
+        />
       ) : (
         <div style={{ marginTop: "25px" }}></div>
       )}
@@ -155,12 +178,13 @@ export const ProfilePage = () => {
             user={email}
             cstate={{ cstate, setCState }}
             sentby={{ sentby, setSentBy }}
+            color={color}
           />
           <div className="profile-nav">
             <div
               id="temp-1"
               style={{
-                backgroundColor: isAboutSection ? "#980a0e" : "#3e3e3e",
+                backgroundColor: isAboutSection ? color : "#3e3e3e",
               }}
               onClick={() => {
                 setIsAboutSection(true);
@@ -171,7 +195,7 @@ export const ProfilePage = () => {
             <div
               id="temp-2"
               style={{
-                backgroundColor: isAboutSection ? "#3e3e3e" : "#980a0e",
+                backgroundColor: isAboutSection ? "#3e3e3e" : color,
               }}
               onClick={() => {
                 setIsAboutSection(false);
@@ -181,7 +205,7 @@ export const ProfilePage = () => {
             </div>
           </div>
           {isAboutSection ? (
-            <ProfileAbout cardContent={card} />
+            <ProfileAbout cardContent={card} color={color} />
           ) : (
             <ProfileCareer cardContent={card} />
           )}

@@ -9,6 +9,7 @@ export const Card = ({
   profileEmail,
   cstate,
   sentby,
+  color,
 }) => {
   return (
     <div className="card">
@@ -18,7 +19,9 @@ export const Card = ({
           style={{ backgroundImage: `url(${cardContent.profilePicture})` }}
         ></div>
         <div className="card-tags">
-          <div className="term-tag">{cardContent.currentTerm}</div>
+          <div className="term-tag" style={{ backgroundColor: color }}>
+            {cardContent.currentTerm}
+          </div>
           {isMyProfile === false ? (
             <ConnectTag
               cstate={cstate}
@@ -32,7 +35,9 @@ export const Card = ({
       <div className="card-right">
         <h1 className="right-title">{cardContent.firstName}</h1>
         <h1 className="right-title">{cardContent.lastName}</h1>
-        <h2 className="right-company">{cardContent.company}</h2>
+        <h2 className="right-company" style={{ color: color }}>
+          {cardContent.company}
+        </h2>
         <h2 className="right-program">{cardContent.studentProgram}</h2>
         <h2 className="right-loc">{cardContent.studentLocation}</h2>
         <h2 className="right-school">{cardContent.educationalInstitution}</h2>

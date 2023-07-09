@@ -4,7 +4,7 @@ import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 
-export const ProfileAbout = ({ cardContent }) => {
+export const ProfileAbout = ({ cardContent, color }) => {
   return (
     <div className="profile-about-content">
       <div className="profile-large-text">
@@ -39,10 +39,18 @@ export const ProfileAbout = ({ cardContent }) => {
       <div className="profile-large-text">
         <h1>Me In 4 Tags</h1>
         <div className="profile-large-sub-elements">
-          <div className="profile-large-tag">{cardContent.meInFourTags1}</div>
-          <div className="profile-large-tag">{cardContent.meInFourTags2}</div>
-          <div className="profile-large-tag">{cardContent.meInFourTags3}</div>
-          <div className="profile-large-tag">{cardContent.meInFourTags4}</div>
+          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+            {cardContent.meInFourTags1}
+          </div>
+          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+            {cardContent.meInFourTags2}
+          </div>
+          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+            {cardContent.meInFourTags3}
+          </div>
+          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+            {cardContent.meInFourTags4}
+          </div>
         </div>
       </div>
     </div>

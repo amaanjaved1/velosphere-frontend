@@ -9,6 +9,7 @@ export const BigCard = ({
   profileEmail,
   cstate,
   sentby,
+  color,
 }) => {
   return (
     <div className="big-card">
@@ -18,7 +19,9 @@ export const BigCard = ({
           style={{ backgroundImage: `url(${cardContent.profilePicture})` }}
         ></div>
         <div className="big-card-tags">
-          <div className="big-term-tag">{cardContent.currentTerm}</div>
+          <div className="big-term-tag" style={{ backgroundColor: color }}>
+            {cardContent.currentTerm}
+          </div>
           {isMyProfile === false ? (
             <ConnectTag
               cstate={cstate}
@@ -32,7 +35,9 @@ export const BigCard = ({
       <div className="big-card-right">
         <h1 className="big-right-title">{cardContent.firstName}</h1>
         <h1 className="big-right-title">{cardContent.lastName}</h1>
-        <h2 className="big-right-company">{cardContent.company}</h2>
+        <h2 className="big-right-company" style={{ color: color }}>
+          {cardContent.company}
+        </h2>
         <h2 className="big-right-program">{cardContent.studentProgram}</h2>
         <h2 className="big-right-loc">{cardContent.studentLocation}</h2>
         <h2 className="big-right-school">
