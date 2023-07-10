@@ -27,7 +27,7 @@ export const ProfilePage = () => {
   const [sentby, setSentBy] = useState(false);
   const [card, setCard] = useState({});
   const [company, setCompany] = useState("");
-  const [color, setColor] = useState("#980a0e");
+  const [color, setColor] = useState("#ff46c0");
 
   const getCard = async () => {
     try {

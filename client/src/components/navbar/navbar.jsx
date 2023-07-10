@@ -3,7 +3,7 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useRef } from "react";
 import "./navbar.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setLogout } from "state/index.js";
 
 export const Navbar = () => {

@@ -6,13 +6,26 @@ export const PrivateRoutes = () => {
   const token = useSelector((state) => state.token);
   const expirationDate = useSelector((state) => state.expirationDate);
   const dispatch = useDispatch();
+  let isValid = true;
 
-  const today = new Date(); // Get today's date
-
-  if (expirationDate && expirationDate < today) {
-    // Token has expired, clear it from memory
-    dispatch(setLogout());
+  if (!token) {
+    isValid = false;
   }
 
-  return token !== null ? <Outlet /> : <Navigate to="/login" />;
+  if (!expirationDate) {
+    isValid = false;
+  }
+
+  const today = new Date(); // Get today's date
+  const expirationDateConverted = new Date(expirationDate);
+
+  console.log(today);
+  console.log(expirationDateConverted);
+
+  if (expirationDateConverted < today) {
+    dispatch(setLogout());
+    isValid = false;
+  }
+
+  return isValid ? <Outlet /> : <Navigate to="/login" />;
 };
