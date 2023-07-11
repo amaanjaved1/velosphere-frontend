@@ -11,36 +11,6 @@ export const LoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const forgotPass = async () => {
-    if (email === "") {
-      window.alert("Please enter your email address");
-      return;
-    }
-
-    try {
-      const requestBody = { email: email };
-
-      const response = await fetch(
-        "http://localhost:5000/auth/forgot-password",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestBody),
-        }
-      );
-
-      if (response.ok) {
-        window.alert("Email containing password sent to your email address");
-      } else {
-        window.alert(`Request failed: ${response.status}`);
-      }
-    } catch (err) {
-      window.alert("An error occurred", err);
-    }
-  };
-
   const resendVerification = async () => {
     if (email === "") {
       window.alert("Please enter your email address");
@@ -161,7 +131,7 @@ export const LoginPage = () => {
               cursor: "pointer",
               textDecoration: "underline",
             }}
-            onClick={forgotPass}
+            onClick={() => navigate("/change-password")}
           >
             Click here
           </h3>

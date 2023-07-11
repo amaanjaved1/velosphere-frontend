@@ -8,6 +8,7 @@ import { ProfilePage } from "scenes/profilePage";
 import { RequestsPage } from "scenes/requestsPage";
 import { SearchResultsPage } from "scenes/searchResultsPage";
 import { RegistrationSuccessPage } from "scenes/registrationSuccess";
+import { ForgotPasswordPage } from "scenes/passwordPage";
 import { PrivateRoutes } from "./private";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             path="/registration-success"
             element={<RegistrationSuccessPage />}
           />
+          <Route path="/change-password" element={<ForgotPasswordPage />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/connections" element={<ConnectionsPage />} />
