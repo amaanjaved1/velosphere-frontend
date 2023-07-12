@@ -19,9 +19,6 @@ export const PrivateRoutes = () => {
   const today = new Date(); // Get today's date
   const expirationDateConverted = new Date(expirationDate);
 
-  console.log(today);
-  console.log(expirationDateConverted);
-
   if (expirationDateConverted < today) {
     dispatch(setLogout());
     isValid = false;
