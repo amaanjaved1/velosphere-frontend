@@ -78,7 +78,7 @@
 }
 
 .request-card-hr {
-  margin-top: 15px;
+  margin-top: 20px;
   margin-right: 13px;
   margin-bottom: 20px;
 }
@@ -91,7 +91,7 @@
   margin-right: 13px;
 }
 
-.request-card-accept {
+.request-card-decline {
   width: 90px;
   height: 30px;
   background-color: var(--scotiabank);
@@ -102,7 +102,7 @@
   padding: 2px;
 }
 
-.request-card-decline {
+.request-card-accept {
   width: 90px;
   height: 30px;
   background-color: #256c0d;

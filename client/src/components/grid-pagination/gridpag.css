@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.grid-pag-container {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.grid-pag-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e3e3e;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  gap: 30px;
+}
+
+.grid-pag-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 80%;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 3px;
+}
+
+.grid-pag-num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 80%;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+}
