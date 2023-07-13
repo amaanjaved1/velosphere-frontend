@@ -17,6 +17,7 @@ export const HomePage = () => {
       </div>
       <Search />
       <h2 id="home-recommendation-header">Recommended for you</h2>
+      <Grid />
     </div>
   );
 };

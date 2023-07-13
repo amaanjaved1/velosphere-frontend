@@ -27,10 +27,10 @@ export const Grid = () => {
     }
   };
 
-  const getConnections = async () => {
+  const getResults = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/query/connections/${email}/?page=${page}&limit=${limit}`,
+        `http://localhost:5000/query/main/?page=${page}&limit=${limit}`,
         {
           method: "GET",
           headers: {
@@ -70,21 +70,42 @@ export const Grid = () => {
       const content = results.content;
       const cards = [];
 
-      console.log(results);
-
       for (let i = 0; i < content.length; i++) {
-        // const card = (
-        //   <RequestCard
-        //     key={i}
-        //     email={content[i].sentby}
-        //     link={`/profile/${content[i].sentby}`}
-        //     token={token}
-        //     actionFrom={email}
-        //     handleRemove={handleRemove}
-        //   />
-        // );
-        // cards.push(card);
-        console.log(content[i]);
+        let color;
+        if (content[i].company === "scotiabank") {
+          color = "#980a0e";
+        } else if (content[i].company === "tangerine") {
+          color = "#fe793e";
+        } else {
+          color = "#0a085b";
+        }
+
+        let cardContent = {
+          profilePicture: content[i].profilepicture,
+          company: content[i].company.toUpperCase(),
+          currentTerm: content[i].currentterm,
+          firstName: content[i].firstname,
+          lastName: content[i].lastname,
+          studentProgram: content[i].studentprogram,
+          studentLocation: content[i].studentlocation,
+          educationalInstitution: content[i].educationalinstitution,
+          email: content[i].email,
+        };
+
+        const card = (
+          <Card
+            className="grid-item"
+            cardContent={cardContent}
+            isMyProfile={false}
+            user={email}
+            profileEmail={content[i].email}
+            color={color}
+            inGrid={true}
+            cstate={false}
+            sentby={false}
+          />
+        );
+        cards.push(card);
       }
 
       setCardContent(cards);
@@ -94,7 +115,7 @@ export const Grid = () => {
   };
 
   useEffect(() => {
-    getConnections();
+    getResults();
   }, [page]);
 
   return (
@@ -103,15 +124,15 @@ export const Grid = () => {
         {cardContent.map((card, index) => (
           <React.Fragment key={index}>{card}</React.Fragment>
         ))}
-        <GridPagination
-          inputProps={{
-            previous: { action: handlePrev, hasPrev: hasPrev },
-            next: { action: handleNext, hasNext: hasNext },
-            page,
-            totalPages,
-          }}
-        />
       </div>
+      <GridPagination
+        inputProps={{
+          previous: { action: handlePrev, hasPrev: hasPrev },
+          next: { action: handleNext, hasNext: hasNext },
+          page,
+          totalPages,
+        }}
+      />
     </div>
   );
 };

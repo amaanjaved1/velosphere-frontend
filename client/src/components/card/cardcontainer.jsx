@@ -25,6 +25,7 @@ export const CardContainer = ({
           cstate={cstate}
           sentby={sentby}
           color={color}
+          inGrid={false}
         />
       ) : (
         <BigCard

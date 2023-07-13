@@ -101,14 +101,6 @@ export const ConnectTag = ({ cstate, user, profileEmail, sentby }) => {
       className="connection-tag"
       onChange={handleOptionChange}
       value="default"
-      style={{
-        backgroundColor:
-          cstate.cstate === "accepted"
-            ? "#256c0d"
-            : cstate.cstate === "pending"
-            ? "#FFA500"
-            : "#980A0E",
-      }}
     >
       <option className="connection-tag-option" value="default" disabled hidden>
         Actions

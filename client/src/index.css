@@ -19,7 +19,7 @@ h1 {
 }
 
 .app {
-  min-height: 100vh;
+  min-height: 120vh;
   background-image: url("../public/background.png");
   background-size: cover;
   background-position: center;

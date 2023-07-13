@@ -66,8 +66,6 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
 
       setTotalPages(results.totalPages);
 
-      console.log(results.content);
-
       // results.content is an array of objects
       // iterate over each object and create an array of objects
       // then, set cardContent to that array

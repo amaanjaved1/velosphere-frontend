@@ -10,6 +10,7 @@ export const Card = ({
   cstate,
   sentby,
   color,
+  inGrid,
 }) => {
   return (
     <div className="card">
@@ -22,14 +23,20 @@ export const Card = ({
           <div className="term-tag" style={{ backgroundColor: color }}>
             {cardContent.currentTerm}
           </div>
-          {isMyProfile === false ? (
+          {isMyProfile === false && inGrid === false ? (
             <ConnectTag
               cstate={cstate}
               user={user}
               profileEmail={profileEmail}
               sentby={sentby}
             />
-          ) : null}
+          ) : (
+            <a href={`/profile/${profileEmail}`}>
+              <div className="term-tag" style={{ backgroundColor: color }}>
+                Visit
+              </div>
+            </a>
+          )}
         </div>
       </div>
       <div className="card-right">
@@ -39,8 +46,7 @@ export const Card = ({
           {cardContent.company}
         </h2>
         <h2 className="right-program">{cardContent.studentProgram}</h2>
-        <h2 className="right-loc">{cardContent.studentLocation}</h2>
-        <h2 className="right-school">{cardContent.educationalInstitution}</h2>
+        <h2 className="right-loc">{cardContent.educationalInstitution}</h2>
       </div>
     </div>
   );
