@@ -28,7 +28,10 @@ function App() {
             <Route path="/connections" element={<ConnectionsPage />} />
             <Route path="/profile/:profileEmail" element={<ProfilePage />} />
             <Route path="/requests" element={<RequestsPage />} />
-            <Route path="/search" element={<SearchResultsPage />} />
+            <Route
+              path="/search/:searchBy/:searchContent"
+              element={<SearchResultsPage />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

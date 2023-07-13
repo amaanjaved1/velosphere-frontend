@@ -13,7 +13,6 @@
   width: 100%;
   max-width: 1000px;
   display: grid;
-  grid-template-rows: 200px 200px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   justify-items: center;

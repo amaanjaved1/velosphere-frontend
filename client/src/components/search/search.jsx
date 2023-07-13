@@ -1,18 +1,21 @@
 import React from "react";
 import "./search.css";
-import { NextButton } from "components/buttons/next";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Search = () => {
   const color = useSelector((state) => state.color);
   const [searchBy, setSearchBy] = useState("username");
   const [searchByContent, setSearchByContent] = useState("");
+  const navigate = useNavigate();
 
   const searchAction = (e) => {
     // Prevent form submission
     e.preventDefault();
-    // Make request to backend
+
+    // Renavigate to the search results page
+    navigate(`/search/${searchBy}/${searchByContent}`);
   };
 
   const onSelectSearchBy = (e) => {
@@ -47,9 +50,6 @@ export const Search = () => {
           <option className="main-option-dropdown" value="email">
             Email
           </option>
-          <option className="main-option-dropdown" value="studentProgram">
-            Student Program
-          </option>
           <option className="main-option-dropdown" value="company">
             Company
           </option>
@@ -68,9 +68,7 @@ export const Search = () => {
           <option className="main-option-dropdown" value="studentLocation">
             Location
           </option>
-          <option className="main-option-dropdown" value="oneofthe4tags">
-            Tags
-          </option>
+
           <option className="main-option-dropdown" value="internTeam">
             Team
           </option>

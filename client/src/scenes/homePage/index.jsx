@@ -16,8 +16,10 @@ export const HomePage = () => {
         </div>
       </div>
       <Search />
-      <h2 id="home-recommendation-header">Recommended for you</h2>
-      <Grid />
+      <h2 id="home-recommendation-header" style={{ marginBottom: "20px" }}>
+        Recommended for you
+      </h2>
+      <Grid pageType={"main"} />
     </div>
   );
 };
