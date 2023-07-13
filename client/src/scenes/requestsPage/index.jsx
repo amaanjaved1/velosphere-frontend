@@ -8,7 +8,10 @@ export const RequestsPage = () => {
     <div>
       <Navbar />
       <h1 className="requests-heading">My Requests</h1>
-      <RequestCardGrid />
+      <RequestCardGrid
+        defaultMessage={"No requests, you all caught up!"}
+        pageType={"requests"}
+      />
     </div>
   );
 };

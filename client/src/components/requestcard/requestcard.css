@@ -112,3 +112,15 @@
   font-size: 0.9em;
   padding: 2px;
 }
+
+.request-card-remove {
+  width: 90px;
+  height: 30px;
+  background-color: var(--scotiabank);
+  border-radius: 12px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 0.9em;
+  padding: 2px;
+  margin-left: 110px;
+}

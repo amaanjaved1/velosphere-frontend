@@ -1,13 +1,18 @@
 import React from "react";
 import "./requestcard.css";
-import { acceptConnection, denyConnection } from "functions/connections";
+import {
+  acceptConnection,
+  denyConnection,
+  removeConnection,
+} from "functions/connections";
 
 export const RequestCard = ({
   email,
   link,
   token,
   actionFrom,
-  handleRemove,
+  handleClear,
+  pageType,
 }) => {
   const split = email.split(".");
   const firstName = split[0].toUpperCase();
@@ -27,7 +32,7 @@ export const RequestCard = ({
         window.alert("Accept connection request failed");
       }
 
-      handleRemove(email);
+      handleClear(email);
 
       console.log("Connection request accepted");
     } catch (err) {
@@ -47,9 +52,29 @@ export const RequestCard = ({
         window.alert("Deny connection request failed");
       }
 
-      handleRemove(email);
+      handleClear(email);
 
       console.log("Connection request denied");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const handleRemove = async () => {
+    try {
+      const response = await removeConnection({
+        token: token,
+        actionFrom: actionFrom,
+        actionTo: email,
+      });
+
+      if (response.status !== 200) {
+        window.alert("Connection request failed");
+      }
+
+      handleClear(email);
+
+      console.log("Connection removed");
     } catch (err) {
       console.log(err);
     }
@@ -72,14 +97,20 @@ export const RequestCard = ({
         <h2 className="request-card-company">{company}</h2>
         <h2 className="request-card-program">Velocity</h2>
         <hr className="request-card-hr" />
-        <div className="request-card-buttons-container">
-          <button className="request-card-accept" onClick={handleAccept}>
-            Accept
+        {pageType === "requests" ? (
+          <div className="request-card-buttons-container">
+            <button className="request-card-accept" onClick={handleAccept}>
+              Accept
+            </button>
+            <button className="request-card-decline" onClick={handleDeny}>
+              Decline
+            </button>
+          </div>
+        ) : (
+          <button className="request-card-remove" onClick={handleRemove}>
+            Remove
           </button>
-          <button className="request-card-decline" onClick={handleDeny}>
-            Decline
-          </button>
-        </div>
+        )}
       </div>
     </div>
   );

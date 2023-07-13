@@ -3,17 +3,20 @@ import "./requestcard.css";
 import { RequestCard } from "./requestcard.jsx";
 import { useSelector } from "react-redux";
 import { GridPagination } from "components/grid-pagination/gridpagination";
-import { Handyman } from "@mui/icons-material";
 
-export const RequestCardGrid = () => {
+export const RequestCardGrid = ({ pageType, defaultMessage }) => {
   const email = useSelector((state) => state.user);
   const token = useSelector((state) => state.token);
   const [page, setPage] = useState(1);
-  const limit = 2;
   const [hasNext, setHasNext] = useState(true);
   const [hasPrev, setHasPrev] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
   const [cardContent, setCardContent] = useState([]);
+
+  let limit = 6;
+  if (pageType === "requests") {
+    limit = 3;
+  }
 
   const handleNext = () => {
     if (hasNext) {
@@ -28,10 +31,9 @@ export const RequestCardGrid = () => {
   };
 
   const getRequests = async () => {
-    console.log("run");
     try {
       const response = await fetch(
-        `http://localhost:5000/query/requests/${email}/?page=${page}&limit=${limit}`,
+        `http://localhost:5000/query/${pageType}/${email}/?page=${page}&limit=${limit}`,
         {
           method: "GET",
           headers: {
@@ -64,6 +66,8 @@ export const RequestCardGrid = () => {
 
       setTotalPages(results.totalPages);
 
+      console.log(results.content);
+
       // results.content is an array of objects
       // iterate over each object and create an array of objects
       // then, set cardContent to that array
@@ -79,7 +83,8 @@ export const RequestCardGrid = () => {
             link={`/profile/${content[i].sentby}`}
             token={token}
             actionFrom={email}
-            handleRemove={handleRemove}
+            handleClear={handleClear}
+            pageType={pageType}
           />
         );
         cards.push(card);
@@ -91,7 +96,7 @@ export const RequestCardGrid = () => {
     }
   };
 
-  const handleRemove = (email) => {
+  const handleClear = (email) => {
     const newCardContent = cardContent.filter((card) => {
       return card.props.email !== email;
     });
@@ -117,7 +122,7 @@ export const RequestCardGrid = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          No requests! Take initiative!
+          {defaultMessage}
         </h1>
       )}
       {cardContent.map((card, index) => (
