@@ -130,10 +130,6 @@ export const ProfilePage = () => {
     }
   };
 
-  useEffect(() => {
-    getColor();
-  }, [company]);
-
   const toggleEdit = () => {
     setIsEditing(!isEditing);
   };

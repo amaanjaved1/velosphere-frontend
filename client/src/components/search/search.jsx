@@ -70,7 +70,7 @@ export const Search = () => {
           </option>
 
           <option className="main-option-dropdown" value="internTeam">
-            Team
+            Service Line
           </option>
         </select>
       </div>

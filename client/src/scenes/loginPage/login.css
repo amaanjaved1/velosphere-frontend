@@ -19,7 +19,7 @@ h3 {
 
 .login {
   min-width: 100vw;
-  min-height: 100vh;
+  min-height: 150vh;
   display: flex;
   flex-direction: row;
 }
@@ -31,18 +31,7 @@ h3 {
 }
 
 .image-side {
-  /* Black and white gradient */
   background-image: url("../../../public/bw-gradient.png");
-
-  /* Tangerine gradient */
-  /* background-image: url("../../../public/tangerine-gradient.png"); */
-
-  /* Scotiabank gradient  */
-  /* background-image: url("../../../public/scotiabank-gradient.png"); */
-
-  /* MD Financial gradient */
-  /* background-image: url("../../../public/mdfinancial-gradient.png"); */
-
   background-size: cover;
   background-position: center;
   width: 50%;
