@@ -33,7 +33,7 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
   const getRequests = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/query/${pageType}/${email}/?page=${page}&limit=${limit}`,
+        `${process.env.REACT_APP_API_ENDPOINT}/query/${pageType}/${email}/?page=${page}&limit=${limit}`,
         {
           method: "GET",
           headers: {

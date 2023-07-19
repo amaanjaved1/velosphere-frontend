@@ -10,7 +10,7 @@ export const sendConnection = async (args) => {
     };
 
     const response = await fetch(
-      `http://localhost:5000/profile/send-connection/${actionTo}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/profile/send-connection/${actionTo}`,
       {
         method: "POST",
         headers: {
@@ -37,7 +37,7 @@ export const acceptConnection = async (args) => {
     };
 
     const response = await fetch(
-      `http://localhost:5000/profile/accept-connection/${actionTo}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/profile/accept-connection/${actionTo}`,
       {
         method: "POST",
         headers: {
@@ -64,7 +64,7 @@ export const cancelConnection = async (args) => {
     };
 
     const response = await fetch(
-      `http://localhost:5000/profile/cancel-connection/${actionTo}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/profile/cancel-connection/${actionTo}`,
       {
         method: "DELETE",
         headers: {
@@ -91,7 +91,7 @@ export const denyConnection = async (args) => {
     };
 
     const response = await fetch(
-      `http://localhost:5000/profile/deny-connection/${actionTo}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/profile/deny-connection/${actionTo}`,
       {
         method: "DELETE",
         headers: {
@@ -118,7 +118,7 @@ export const removeConnection = async (args) => {
     };
 
     const response = await fetch(
-      `http://localhost:5000/profile/remove-connection/${actionTo}`,
+      `${process.env.REACT_APP_API_ENDPOINT}/profile/remove-connection/${actionTo}`,
       {
         method: "DELETE",
         headers: {

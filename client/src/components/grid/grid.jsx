@@ -30,7 +30,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
   const getMain = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/query/main/?page=${page}&limit=${limit}`,
+        `${process.env.REACT_APP_API_ENDPOINT}/query/main/?page=${page}&limit=${limit}`,
         {
           method: "GET",
           headers: {
@@ -117,7 +117,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
   const getSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/query/search/${searchBy}/${searchContent}/?page=${page}&limit=${limit}`,
+        `${process.env.REACT_APP_API_ENDPOINT}/query/search/${searchBy}/${searchContent}/?page=${page}&limit=${limit}`,
         {
           method: "GET",
           headers: {

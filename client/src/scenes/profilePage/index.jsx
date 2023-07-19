@@ -33,7 +33,7 @@ export const ProfilePage = () => {
     try {
       const requestBody = { actionFrom: email };
       const response = await fetch(
-        `http://localhost:5000/profile/${profileEmail}`,
+        `${process.env.REACT_APP_API_ENDPOINT}/profile/${profileEmail}`,
         {
           method: "POST",
           headers: {

@@ -205,7 +205,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
       };
 
       const response = await fetch(
-        `http://localhost:5000/profile/update/${user}`,
+        `${process.env.REACT_APP_API_ENDPOINT}/profile/update/${user}`,
         {
           method: "PUT",
           headers: {
