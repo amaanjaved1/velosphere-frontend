@@ -144,7 +144,6 @@ export const RegisterPage = () => {
     if (
       email.includes("@scotiabank.com") ||
       email.includes("@tangerine.ca") ||
-      email.includes("@gmail.com") ||
       email.includes("@mdfinancial.ca")
     ) {
       if (!pagesCompleted.includes(1)) {
@@ -156,7 +155,6 @@ export const RegisterPage = () => {
       !(
         email.includes("@scotiabank.com") ||
         email.includes("@tangerine.ca") ||
-        email.includes("@gmail.com") ||
         email.includes("@mdfinancial.ca")
       )
     ) {

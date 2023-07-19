@@ -50,8 +50,7 @@ export const ForgotPasswordPage = () => {
     if (
       email.includes("@scotiabank.com") ||
       email.includes("@tangerine.ca") ||
-      email.includes("@mdfinancial.ca") ||
-      email.includes("@gmail.com")
+      email.includes("@mdfinancial.ca")
     ) {
       return true;
     }
