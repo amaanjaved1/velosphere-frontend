@@ -269,7 +269,7 @@ export const RegisterPage = () => {
     let name = `${firstName}${lastName}${num}`.replace(/[^a-zA-Z0-9]/g, "");
     setUsername(name);
 
-    let profilePicture = `https://avatars.dicebear.com/api/initials/${firstName}%20${lastName}.svg`;
+    let profilePicture = `https://robohash.org/${email}.png`;
 
     const requestBody = {
       username: name,

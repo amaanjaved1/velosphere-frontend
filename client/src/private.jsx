@@ -5,6 +5,7 @@ import { setLogout } from "state/index.js";
 export const PrivateRoutes = () => {
   const token = useSelector((state) => state.token);
   const expirationDate = useSelector((state) => state.expirationDate);
+
   const dispatch = useDispatch();
   let isValid = true;
 

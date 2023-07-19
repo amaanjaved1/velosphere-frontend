@@ -73,7 +73,10 @@ export const LoginPage = () => {
         window.alert(`Request failed: ${response.status}`);
       }
     } catch (err) {
-      window.alert("An error occurred", err);
+      window.alert(
+        "An error occurred...Please make sure that your email is verified.",
+        err
+      );
     }
   };
 

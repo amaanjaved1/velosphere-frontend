@@ -52,9 +52,10 @@
   font-family: "Inter", sans-serif;
   font-weight: 800;
   text-align: right;
-  font-size: 1.7em;
+  font-size: 0.8em;
   padding-top: 13px;
   padding-right: 13px;
+  text-align: right;
 }
 
 .request-card-company {

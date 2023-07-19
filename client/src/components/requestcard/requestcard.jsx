@@ -14,11 +14,16 @@ export const RequestCard = ({
   handleClear,
   pageType,
 }) => {
-  const split = email.split(".");
-  const firstName = split[0].toUpperCase();
-  const lastName = split[1].split("@")[0].toUpperCase();
-  const company = split[1].split("@")[1].toUpperCase();
-  const profilePicture = `https://avatars.dicebear.com/api/initials/${firstName}%20${lastName}.svg`;
+  let company = "";
+  if (email.includes("tangerine")) {
+    company = "Tangerine";
+  } else if (email.includes("scotiabank")) {
+    company = "Scotiabank";
+  } else {
+    company = "MD Financial";
+  }
+
+  const profilePicture = `https://robohash.org/${email}.png`;
 
   const handleAccept = async () => {
     try {
@@ -91,10 +96,21 @@ export const RequestCard = ({
         </a>
       </div>
       <div className="request-card-right">
-        <h1 className="request-card-name">
-          {firstName} {lastName}
-        </h1>
-        <h2 className="request-card-company">{company}</h2>
+        <h1 className="request-card-name">{email}</h1>
+        <h2
+          className="request-card-company"
+          style={{
+            color:
+              company === "Tangerine"
+                ? "#fe793e"
+                : company === "Scotiabank"
+                ? "#980a0e"
+                : "#0a085b",
+          }}
+        >
+          {company}
+        </h2>
+
         <h2 className="request-card-program">Velocity</h2>
         <hr className="request-card-hr" />
         {pageType === "requests" ? (

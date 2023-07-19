@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export const Search = () => {
   const color = useSelector((state) => state.color);
-  const [searchBy, setSearchBy] = useState("username");
+  const [searchBy, setSearchBy] = useState("firstName");
   const [searchByContent, setSearchByContent] = useState("");
   const navigate = useNavigate();
 
@@ -15,7 +15,9 @@ export const Search = () => {
     e.preventDefault();
 
     // Renavigate to the search results page
-    navigate(`/search/${searchBy}/${searchByContent}`);
+    let content = searchByContent.toLowerCase();
+
+    navigate(`/search/${searchBy}/${content}`);
   };
 
   const onSelectSearchBy = (e) => {
@@ -38,9 +40,6 @@ export const Search = () => {
           className="main-search-by"
           onChange={onSelectSearchBy}
         >
-          <option className="main-option-dropdown" value="username">
-            Username
-          </option>
           <option className="main-option-dropdown" value="firstName">
             First Name
           </option>

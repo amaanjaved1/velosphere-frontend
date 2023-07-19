@@ -33,7 +33,7 @@ const store = configureStore({
 
 // redux persist is typically used for storing and persisting the redux state on the local computer
 // Essentially, this code is just a bunch of boiler plate for adding this functionality to the app
-
+// In react.strictmode, in the dev phase, it will run the app twice to check for any errors
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
