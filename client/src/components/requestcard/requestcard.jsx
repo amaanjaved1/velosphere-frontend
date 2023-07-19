@@ -115,15 +115,27 @@ export const RequestCard = ({
         <hr className="request-card-hr" />
         {pageType === "requests" ? (
           <div className="request-card-buttons-container">
-            <button className="request-card-accept" onClick={handleAccept}>
+            <button
+              className="request-card-accept"
+              onClick={handleAccept}
+              style={{ cursor: "pointer" }}
+            >
               Accept
             </button>
-            <button className="request-card-decline" onClick={handleDeny}>
+            <button
+              className="request-card-decline"
+              onClick={handleDeny}
+              style={{ cursor: "pointer" }}
+            >
               Decline
             </button>
           </div>
         ) : (
-          <button className="request-card-remove" onClick={handleRemove}>
+          <button
+            className="request-card-remove"
+            onClick={handleRemove}
+            style={{ cursor: "pointer" }}
+          >
             Remove
           </button>
         )}
