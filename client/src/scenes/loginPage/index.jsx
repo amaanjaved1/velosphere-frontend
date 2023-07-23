@@ -66,7 +66,7 @@ export const LoginPage = () => {
         <form className="form-content" onSubmit={login}>
           <div className="form-entry">
             <label htmlFor="email" className="label">
-              Enter email:
+              Enter email: (this is your work email)
             </label>
             <input
               type="email"

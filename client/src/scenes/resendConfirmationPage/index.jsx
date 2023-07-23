@@ -1,5 +1,5 @@
 import "./resend.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { InputFieldButton } from "../../components/buttons/input";
 import { NextButton } from "../../components/buttons/next";
 
@@ -30,6 +30,7 @@ export const ResendVerificationPage = () => {
           body: JSON.stringify(requestBody),
         }
       );
+      console.log(response);
 
       if (response.ok) {
         window.alert(
@@ -66,7 +67,7 @@ export const ResendVerificationPage = () => {
           name="email"
           id="email"
           label="Email"
-          placeholder="Enter your email"
+          placeholder="This is your work email"
           content={email}
           valuefunction={setEmail}
         />

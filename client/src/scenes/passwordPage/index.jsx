@@ -6,7 +6,6 @@ import "./password.css";
 
 export const ForgotPasswordPage = () => {
   const [email, setEmail] = useState("");
-  const [commEmail, setCommEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isValidForm, setisValidForm] = useState(false);
@@ -18,7 +17,6 @@ export const ForgotPasswordPage = () => {
       } else {
         const requestBody = {
           email: email,
-          commEmail: commEmail,
           password: password,
         };
 
@@ -63,14 +61,13 @@ export const ForgotPasswordPage = () => {
     if (
       password === confirmPassword &&
       password.length > 0 &&
-      isValidEmail() === true &&
-      commEmail.length > 0
+      isValidEmail() === true
     ) {
       setisValidForm(true);
     } else {
       setisValidForm(false);
     }
-  }, [email, password, confirmPassword, commEmail]);
+  }, [email, password, confirmPassword]);
 
   return (
     <>
@@ -87,18 +84,9 @@ export const ForgotPasswordPage = () => {
           name="email"
           id="email"
           label="Email"
-          placeholder="Enter your email"
+          placeholder="This is your work email"
           content={email}
           valuefunction={setEmail}
-        />
-        <InputFieldButton
-          type="personalEmail"
-          name="personalEmail"
-          id="personalEmail"
-          label="Personal Email (where confirmation email will be set)"
-          placeholder="THIS IS NOT YOUR WORK EMAIL"
-          content={commEmail}
-          valuefunction={setCommEmail}
         />
         <InputFieldButton
           type="password"
