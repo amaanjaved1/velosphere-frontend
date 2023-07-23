@@ -11,37 +11,6 @@ export const LoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const resendVerification = async () => {
-    if (email === "") {
-      window.alert("Please enter your email address");
-      return;
-    }
-
-    try {
-      const requestBody = { email: email };
-      const response = await fetch(
-        `${process.env.REACT_APP_API_ENDPOINT}/auth/resend-confirmation-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestBody),
-        }
-      );
-
-      if (response.ok) {
-        window.alert(
-          "Verification email has been recent! Please check your inbox!"
-        );
-      } else {
-        window.alert(`Request failed: ${response.status}`);
-      }
-    } catch (err) {
-      window.alert("An error occurred", err);
-    }
-  };
-
   const login = async (e) => {
     e.preventDefault();
     if (email === "" || password === "") {
@@ -150,7 +119,7 @@ export const LoginPage = () => {
               cursor: "pointer",
               textDecoration: "underline",
             }}
-            onClick={resendVerification}
+            onClick={() => navigate("/resend-confirmation")}
           >
             Click here
           </h3>

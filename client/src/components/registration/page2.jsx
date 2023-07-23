@@ -8,6 +8,15 @@ export const Page2 = ({ inputProps }) => {
       <h2 className="registration-page-desc">User Information:</h2>
       <div className="registration-content-container">
         <InputFieldButton
+          type="personalEmail"
+          name="personalEmail"
+          id="personalEmail"
+          label="Personal Email (all communication will be sent to this email)"
+          placeholder="Please use an email that you check regularly"
+          content={inputProps.commEmailKey.content}
+          valuefunction={inputProps.commEmailKey.valuefunction}
+        />
+        <InputFieldButton
           type="firstName"
           name="firstName"
           id="firstName"

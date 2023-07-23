@@ -24,6 +24,7 @@ export const RegisterPage = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [username, setUsername] = useState("First + Last + XXX");
+  const [commEmail, setCommEmail] = useState("");
   const [password, setPassword] = useState("");
   const [studentProgram, setStudentProgram] = useState("Velocity");
   const [internPosition, setInternPosition] = useState("");
@@ -66,6 +67,7 @@ export const RegisterPage = () => {
     "LinkedIn Account": linkedin,
     "GitHub Account": github,
     "Facebook Account": facebook,
+    "Personal Email": commEmail,
   };
 
   const nextPage = () => {
@@ -134,6 +136,7 @@ export const RegisterPage = () => {
     linkedin,
     github,
     facebook,
+    commEmail,
   ]);
 
   const checkPage1Completion = () => {
@@ -167,14 +170,14 @@ export const RegisterPage = () => {
   const checkPage2Completion = () => {
     // Check to see if the first name, last name, and password are all filled in
     // If they are, then add page 2 to the pagesCompleted array
-    if (firstName && lastName && password) {
+    if (firstName && lastName && password && commEmail) {
       if (!pagesCompleted.includes(2)) {
         setPagesCompleted([...pagesCompleted, 2]);
       }
     }
 
     // If they are not, then remove page 2 from the pagesCompleted array
-    if (!(firstName && lastName && password)) {
+    if (!(firstName && lastName && password && commEmail)) {
       if (pagesCompleted.includes(2)) {
         setPagesCompleted(pagesCompleted.filter((page) => page !== 2));
       }
@@ -294,6 +297,7 @@ export const RegisterPage = () => {
       internTeam: formValues["Internship Team"],
       currentTerm: formValues["Current Term"],
       pastTerms: [],
+      commEmail: formValues["Personal Email"],
     };
 
     // Make the backend request
@@ -343,6 +347,7 @@ export const RegisterPage = () => {
           firstNameKey: { content: firstName, valuefunction: setFirstName },
           lastNameKey: { content: lastName, valuefunction: setLastName },
           passwordKey: { content: password, valuefunction: setPassword },
+          commEmailKey: { content: commEmail, valuefunction: setCommEmail },
         };
         return <Page2 inputProps={inputProps2} />;
       case 3:

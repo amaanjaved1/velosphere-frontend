@@ -1,0 +1,88 @@
+import "./resend.css";
+import React, { useState, useEffect } from "react";
+import { InputFieldButton } from "../../components/buttons/input";
+import { NextButton } from "../../components/buttons/next";
+
+export const ResendVerificationPage = () => {
+  const [email, setEmail] = useState("");
+  const [commEmail, setCommEmail] = useState("");
+
+  const resendVerification = async () => {
+    if (email === "") {
+      window.alert("Please enter your email address");
+      return;
+    }
+
+    if (!isValidEmail()) {
+      window.alert("Please enter a valid email address");
+      return;
+    }
+
+    try {
+      const requestBody = { email: email, commEmail: commEmail };
+      const response = await fetch(
+        `${process.env.REACT_APP_API_ENDPOINT}/auth/resend-confirmation-email`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
+
+      if (response.ok) {
+        window.alert(
+          "Verification email has been recent! Please check your inbox!"
+        );
+      } else {
+        window.alert(`Request failed: ${response.status}`);
+      }
+    } catch (err) {
+      window.alert("An error occurred", err);
+    }
+  };
+
+  const isValidEmail = () => {
+    if (
+      email.includes("@scotiabank.com") ||
+      email.includes("@tangerine.ca") ||
+      (email.includes("@mdfinancial.ca") && commEmail.includes("@"))
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  return (
+    <>
+      <div className="change-password-form">
+        <h1 className="change-password-main">Resend Verification Email</h1>
+        <h2 className="change-password-message">
+          Return to <a href="/login">Login</a>
+        </h2>
+        <InputFieldButton
+          type="email"
+          name="email"
+          id="email"
+          label="Email"
+          placeholder="Enter your email"
+          content={email}
+          valuefunction={setEmail}
+        />
+        <InputFieldButton
+          type="personalEmail"
+          name="personalEmail"
+          id="personalEmail"
+          label="Personal Email (where confirmation email will be set)"
+          placeholder="THIS IS NOT YOUR WORK EMAIL"
+          content={commEmail}
+          valuefunction={setCommEmail}
+        />
+        <NextButton action={resendVerification} message="Send" color="#ffa877">
+          Send
+        </NextButton>
+      </div>
+    </>
+  );
+};

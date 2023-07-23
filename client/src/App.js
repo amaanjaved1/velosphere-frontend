@@ -10,6 +10,7 @@ import { SearchResultsPage } from "scenes/searchResultsPage";
 import { RegistrationSuccessPage } from "scenes/registrationSuccess";
 import { ForgotPasswordPage } from "scenes/passwordPage";
 import { PrivateRoutes } from "./private";
+import { ResendVerificationPage } from "scenes/resendConfirmationPage";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
             element={<RegistrationSuccessPage />}
           />
           <Route path="/change-password" element={<ForgotPasswordPage />} />
+          <Route
+            path="/resend-confirmation"
+            element={<ResendVerificationPage />}
+          />
           <Route element={<PrivateRoutes />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/connections" element={<ConnectionsPage />} />
