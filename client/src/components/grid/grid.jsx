@@ -10,7 +10,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
   const token = useSelector((state) => state.token);
   const [page, setPage] = useState(1);
   const limit = 6;
-  const [hasNext, setHasNext] = useState(true);
+  const [hasNext, setHasNext] = useState(false);
   const [hasPrev, setHasPrev] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
   const [cardContent, setCardContent] = useState([]);
