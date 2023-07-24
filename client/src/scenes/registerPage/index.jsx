@@ -45,6 +45,7 @@ export const RegisterPage = () => {
   const [isFormComplete, setIsFormComplete] = useState(false);
   const num = Math.floor(Math.random() * 1000);
   const [pagesCompleted, setPagesCompleted] = useState([]);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const formValues = {
     "My Email": email,
@@ -302,6 +303,7 @@ export const RegisterPage = () => {
 
     // Make the backend request
     try {
+      setIsSubmitted(true);
       const response = await fetch(
         `${process.env.REACT_APP_API_ENDPOINT}/auth/register`,
         {
@@ -325,10 +327,12 @@ export const RegisterPage = () => {
         // For example, display an error message to the user
         window.alert(`Registration failed: ${response.status}`);
       }
+      setIsSubmitted(false);
     } catch (error) {
       // Network error or other exception occurred
       // Handle the error
       // For example, display a generic error message to the user
+      setIsSubmitted(false);
       window.alert("An error occurred during registration", error);
     }
   };
@@ -437,7 +441,19 @@ export const RegisterPage = () => {
             {" "}
             <NextButton color={color} action={prevPage} message="Prev" />
             {isFormComplete ? (
-              <NextButton color={color} action={register} message="Register" />
+              isSubmitted ? (
+                <NextButton
+                  color={"#3e3e3e"}
+                  message="Wait..."
+                  isClickable={false}
+                />
+              ) : (
+                <NextButton
+                  color={color}
+                  action={register}
+                  message="Register"
+                />
+              )
             ) : null}
           </div>
         )}

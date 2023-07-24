@@ -14,25 +14,33 @@ export const ProfileAbout = ({ cardContent, color }) => {
       <div className="profile-large-text">
         <h1>Connect With Me</h1>
         <div className="profile-large-sub-elements">
-          {cardContent.github !== "n/a" ? (
-            <a href={cardContent.github}>
-              <FiGithub size={50} className="profile-large-icon" />
-            </a>
+          {cardContent.github ? (
+            cardContent.github.includes("github") ? (
+              <a href={cardContent.github}>
+                <FiGithub size={50} className="profile-large-icon" />
+              </a>
+            ) : null
           ) : null}
-          {cardContent.linkedin !== "n/a" ? (
-            <a href={cardContent.linkedin}>
-              <FaLinkedinIn size={50} className="profile-large-icon" />
-            </a>
+          {cardContent.linkedin ? (
+            cardContent.linkedin.includes("linkedin") ? (
+              <a href={cardContent.linkedin}>
+                <FaLinkedinIn size={50} className="profile-large-icon" />
+              </a>
+            ) : null
           ) : null}
-          {cardContent.twitter !== "n/a" ? (
-            <a href={cardContent.twitter}>
-              <BsTwitter size={50} className="profile-large-icon" />
-            </a>
+          {cardContent.twitter ? (
+            cardContent.twitter.includes("twitter") ? (
+              <a href={cardContent.twitter}>
+                <BsTwitter size={50} className="profile-large-icon" />
+              </a>
+            ) : null
           ) : null}
-          {cardContent.facebook !== "n/a" ? (
-            <a href={cardContent.facebook}>
-              <FaFacebookF size={50} className="profile-large-icon" />
-            </a>
+          {cardContent.facebook ? (
+            cardContent.facebook.includes("facebook") ? (
+              <a href={cardContent.facebook}>
+                <FaFacebookF size={50} className="profile-large-icon" />
+              </a>
+            ) : null
           ) : null}
         </div>
       </div>

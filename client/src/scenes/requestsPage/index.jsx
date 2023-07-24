@@ -9,7 +9,7 @@ export const RequestsPage = () => {
       <Navbar />
       <h1 className="requests-heading">My Requests</h1>
       <RequestCardGrid
-        defaultMessage={"No requests, you all caught up!"}
+        defaultMessage={"No requests, your all caught up!"}
         pageType={"requests"}
       />
     </div>

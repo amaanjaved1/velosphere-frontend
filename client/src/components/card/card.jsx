@@ -47,6 +47,7 @@ export const Card = ({
         </h2>
         <h2 className="right-program">{cardContent.studentProgram}</h2>
         <h2 className="right-loc">{cardContent.educationalInstitution}</h2>
+        <h2 className="right-loc">{cardContent.internPosition}</h2>
       </div>
     </div>
   );
