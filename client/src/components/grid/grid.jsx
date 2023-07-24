@@ -14,17 +14,20 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
   const [hasPrev, setHasPrev] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
   const [cardContent, setCardContent] = useState([]);
+  const [isFetched, setIsFetched] = useState(true);
 
   const handleNext = () => {
     if (hasNext) {
       setPage(page + 1);
     }
+    setIsFetched(true);
   };
 
   const handlePrev = () => {
     if (hasPrev) {
       setPage(page - 1);
     }
+    setIsFetched(true);
   };
 
   const getMain = async () => {
@@ -109,7 +112,9 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
       }
 
       setCardContent(cards);
+      setIsFetched(false);
     } catch (err) {
+      setIsFetched(false);
       console.log(err);
     }
   };
@@ -196,7 +201,9 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
       }
 
       setCardContent(cards);
+      setIsFetched(false);
     } catch (err) {
+      setIsFetched(false);
       console.log(err);
     }
   };
@@ -212,9 +219,13 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
   return (
     <div className="grid-root-container">
       {totalPages === 0 ? (
-        <div className="no-results">
-          <h1 style={{ fontSize: "100%" }}>No Results Found</h1>
-        </div>
+        isFetched === false ? (
+          <div className="no-results">
+            <h1 style={{ fontSize: "100%" }}>No Results Found</h1>
+          </div>
+        ) : (
+          <div className="loading-spinner"></div>
+        )
       ) : null}
       <GridPagination
         inputProps={{

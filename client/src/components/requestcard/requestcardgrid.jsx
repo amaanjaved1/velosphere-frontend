@@ -12,6 +12,9 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
   const [hasPrev, setHasPrev] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
   const [cardContent, setCardContent] = useState([]);
+  // isFetched = true; the data is being fetched (currently fetching/loading)
+  // isFetched = false; the data has already been fetched
+  const [isFetched, setIsFetched] = useState(true);
 
   let limit = 6;
   if (pageType === "requests") {
@@ -22,12 +25,14 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
     if (hasNext) {
       setPage(page + 1);
     }
+    setIsFetched(true);
   };
 
   const handlePrev = () => {
     if (hasPrev) {
       setPage(page - 1);
     }
+    setIsFetched(true);
   };
 
   const getRequests = async () => {
@@ -89,7 +94,9 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
       }
 
       setCardContent(cards);
+      setIsFetched(false);
     } catch (err) {
+      setIsFetched(false);
       console.log(err);
     }
   };
@@ -100,29 +107,34 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
     });
 
     setCardContent(newCardContent);
+    setIsFetched(true);
     getRequests();
   };
 
   useEffect(() => {
+    setIsFetched(true);
     getRequests();
   }, [page]);
 
   return (
     <div className="request-card-grid-container">
-      {totalPages === 0 && (
-        <h1
-          style={{
-            textAlign: "center",
-            fontSize: "15px",
-            background:
-              "linear-gradient(263.1deg, #ff46c0 6.87%, #ffa877 105.82%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-          }}
-        >
-          {defaultMessage}
-        </h1>
-      )}
+      {totalPages === 0 &&
+        (isFetched === false ? (
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: "15px",
+              background:
+                "linear-gradient(263.1deg, #ff46c0 6.87%, #ffa877 105.82%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            {defaultMessage}
+          </h1>
+        ) : (
+          <div className="loading-spinner"></div>
+        ))}
       {cardContent.map((card, index) => (
         <React.Fragment key={index}>{card}</React.Fragment>
       ))}
