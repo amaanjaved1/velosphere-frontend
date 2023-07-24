@@ -61,7 +61,7 @@ export const LoginPage = () => {
             <h5 className="title-com">.com</h5>
             <h1 className="title-text">VeloSphere</h1>
           </div>
-          <h2 className="slogan">Unite. Collaborate. Thrive.</h2>
+          <h2 className="slogan">Building community, fostering connections</h2>
         </div>
         <form className="form-content" onSubmit={login}>
           <div className="form-entry">
