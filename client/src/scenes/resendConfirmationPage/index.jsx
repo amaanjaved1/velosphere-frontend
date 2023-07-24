@@ -75,8 +75,8 @@ export const ResendVerificationPage = () => {
           type="personalEmail"
           name="personalEmail"
           id="personalEmail"
-          label="Personal Email (where confirmation email will be set)"
-          placeholder="THIS IS NOT YOUR WORK EMAIL"
+          label="Personal Email"
+          placeholder="Where the confirmation email will be sent"
           content={commEmail}
           valuefunction={setCommEmail}
         />
