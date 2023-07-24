@@ -218,6 +218,9 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
 
   return (
     <div className="grid-root-container">
+      {pageType === "search" ? (
+        <div className="grid-header">for "{searchContent}"</div>
+      ) : null}
       {totalPages === 0 ? (
         isFetched === false ? (
           <div className="no-results">
