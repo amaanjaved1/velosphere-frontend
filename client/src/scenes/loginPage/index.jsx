@@ -10,6 +10,7 @@ export const LoginPage = () => {
   const [password, setPassword] = React.useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const [isFetched, setIsFetched] = React.useState(false);
 
   const login = async (e) => {
     e.preventDefault();
@@ -17,6 +18,8 @@ export const LoginPage = () => {
       window.alert("Please fill out all fields");
       return;
     }
+
+    setIsFetched(true);
 
     try {
       const requestBody = { email: email, password: password };
@@ -42,13 +45,13 @@ export const LoginPage = () => {
         );
         navigate("/");
       } else {
-        window.alert(`Request failed: ${response.status}`);
+        const errorResponse = await response.json();
+        window.alert(errorResponse.message);
       }
+      setIsFetched(false);
     } catch (err) {
-      window.alert(
-        "An error occurred...Please make sure that your email is verified.",
-        err
-      );
+      setIsFetched(false);
+      window.alert("An error occurred... Please try again later.");
     }
   };
 
@@ -61,7 +64,9 @@ export const LoginPage = () => {
             <h5 className="title-com">.com</h5>
             <h1 className="title-text">VeloSphere</h1>
           </div>
-          <h2 className="slogan">Building community, fostering connections</h2>
+          <h2 className="slogan" style={{ textAlign: "center" }}>
+            Building community, fostering connections
+          </h2>
         </div>
         <form className="form-content" onSubmit={login}>
           <div className="form-entry">
@@ -92,9 +97,13 @@ export const LoginPage = () => {
             />
           </div>
 
-          <button type="submit" className="submit-button">
-            Sign In
-          </button>
+          {isFetched ? (
+            <div className="loading-spinner" />
+          ) : (
+            <button type="submit" className="submit-button">
+              Sign In
+            </button>
+          )}
         </form>
         <div className="bottom">
           <h3 style={{ fontWeight: "700", marginTop: "30px" }}>

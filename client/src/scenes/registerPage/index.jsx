@@ -322,10 +322,8 @@ export const RegisterPage = () => {
         navigate("/registration-success");
         updateStore();
       } else {
-        // Registration failed
-        // Handle the failed response
-        // For example, display an error message to the user
-        window.alert(`Registration failed: ${response.status}`);
+        const errorResponse = await response.json();
+        window.alert(errorResponse.message);
       }
       setIsSubmitted(false);
     } catch (error) {
@@ -442,11 +440,7 @@ export const RegisterPage = () => {
             <NextButton color={color} action={prevPage} message="Prev" />
             {isFormComplete ? (
               isSubmitted ? (
-                <NextButton
-                  color={"#3e3e3e"}
-                  message="Wait..."
-                  isClickable={false}
-                />
+                <div className="loading-spinner" />
               ) : (
                 <NextButton
                   color={color}
