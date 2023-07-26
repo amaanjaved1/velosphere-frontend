@@ -96,7 +96,14 @@ export const RequestCard = ({
         </a>
       </div>
       <div className="request-card-right">
-        <h1 className="request-card-name">{email}</h1>
+        <a href={link}>
+          <h1
+            className="request-card-name"
+            style={{ textDecoration: "underline" }}
+          >
+            {email}
+          </h1>
+        </a>
         <h2
           className="request-card-company"
           style={{
