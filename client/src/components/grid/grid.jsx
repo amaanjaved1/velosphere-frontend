@@ -93,6 +93,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
           studentLocation: content[i].studentlocation,
           educationalInstitution: content[i].educationalinstitution,
           email: content[i].email,
+          internPosition: content[i].internposition,
         };
 
         const card = (
@@ -182,6 +183,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
           studentLocation: content[i].studentlocation,
           educationalInstitution: content[i].educationalinstitution,
           email: content[i].email,
+          internPosition: content[i].internposition,
         };
 
         const card = (
