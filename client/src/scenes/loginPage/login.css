@@ -17,25 +17,9 @@ h3 {
   text-align: center;
 }
 
-.login {
-  min-width: 100vw;
-  min-height: 150vh;
-  display: flex;
-  flex-direction: row;
-}
-
 .form-side {
   background-color: black;
-  width: 50%;
-  max-width: 800px;
-}
-
-.image-side {
-  background-image: url("../../../public/bw-gradient.png");
-  background-size: cover;
-  background-position: center;
-  width: 50%;
-  flex-grow: 1;
+  width: 100vw;
 }
 
 .top {
@@ -113,6 +97,7 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 75%;
+  max-width: 500px;
   margin-bottom: 25px;
 }
 
@@ -138,7 +123,8 @@ h3 {
 }
 
 .submit-button {
-  width: 50%;
+  width: 40%;
+  max-width: 400px;
   height: 50px;
   background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
   border-radius: 10px;

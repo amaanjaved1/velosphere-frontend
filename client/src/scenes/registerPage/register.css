@@ -2,7 +2,7 @@
 
 .register-page {
   width: 100vw;
-  height: 150vh;
+  height: 1500px;
   display: flex;
   flex-direction: row;
 }

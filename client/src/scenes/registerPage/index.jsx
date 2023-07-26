@@ -447,7 +447,10 @@ export const RegisterPage = () => {
                     alignItems: "center",
                   }}
                 >
-                  <div className="loading-spinner" />
+                  <div
+                    style={{ marginBottom: "20px" }}
+                    className="loading-spinner"
+                  />
                 </div>
               ) : (
                 <NextButton
