@@ -71,7 +71,7 @@ export const LoginPage = () => {
         <form className="form-content" onSubmit={login}>
           <div className="form-entry">
             <label htmlFor="email" className="label">
-              Enter email: (this is your work email)
+              Work Email
             </label>
             <input
               type="email"
@@ -85,7 +85,7 @@ export const LoginPage = () => {
 
           <div className="form-entry">
             <label htmlFor="password" className="label">
-              Enter password:
+              Password
             </label>
             <input
               type="password"
@@ -144,6 +144,20 @@ export const LoginPage = () => {
               Register here
             </h3>
           </a>
+          <h3
+            style={{ marginTop: "50px", fontSize: "10px", fontWeight: "300" }}
+          >
+            <span style={{ fontWeight: "800", color: "#ffa877" }}>
+              Work email
+            </span>{" "}
+            is linked to your account
+          </h3>
+          <h3 style={{ fontSize: "10px", fontWeight: "300" }}>
+            <span style={{ fontWeight: "800", color: "#ffa877" }}>
+              Personal email
+            </span>{" "}
+            is where we send you the verification/password reset emails
+          </h3>
           <h3
             style={{ marginTop: "50px", fontSize: "10px", fontWeight: "300" }}
           >

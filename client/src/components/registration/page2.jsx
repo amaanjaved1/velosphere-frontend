@@ -11,8 +11,8 @@ export const Page2 = ({ inputProps }) => {
           type="personalEmail"
           name="personalEmail"
           id="personalEmail"
-          label="Personal Email (all communication will be sent to this email)"
-          placeholder="Please use an email that you check regularly"
+          label="Personal Email"
+          placeholder="Where email communications will be sent"
           content={inputProps.commEmailKey.content}
           valuefunction={inputProps.commEmailKey.valuefunction}
         />
@@ -39,7 +39,7 @@ export const Page2 = ({ inputProps }) => {
           name="password"
           id="password"
           label="Password"
-          placeholder="i.e. FolW!MYlinkdIN"
+          placeholder="Please DO NOT use your work password(s)"
           content={inputProps.passwordKey.content}
           valuefunction={inputProps.passwordKey.valuefunction}
         />

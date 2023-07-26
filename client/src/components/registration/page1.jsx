@@ -21,7 +21,7 @@ export const Page1 = ({ inputProps }) => {
           type="email"
           name="email"
           id="email"
-          label="Email address"
+          label="Work Email"
           placeholder="i.e. you@company-email.com"
           content={inputProps.emailKey.content}
           valuefunction={inputProps.emailKey.valuefunction}

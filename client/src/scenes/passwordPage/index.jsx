@@ -83,8 +83,8 @@ export const ForgotPasswordPage = () => {
           type="email"
           name="email"
           id="email"
-          label="Email"
-          placeholder="This is your work email"
+          label="Work Email"
+          placeholder=""
           content={email}
           valuefunction={setEmail}
         />
@@ -101,7 +101,7 @@ export const ForgotPasswordPage = () => {
           type="password"
           name="confirmPassword"
           id="confirmPassword"
-          label="Confirm New Password"
+          label="Retype New Password"
           placeholder="Passwords must match"
           content={confirmPassword}
           valuefunction={setConfirmPassword}

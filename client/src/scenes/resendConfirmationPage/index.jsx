@@ -66,8 +66,8 @@ export const ResendVerificationPage = () => {
           type="email"
           name="email"
           id="email"
-          label="Email"
-          placeholder="This is your work email"
+          label="Work Email"
+          placeholder=""
           content={email}
           valuefunction={setEmail}
         />
