@@ -440,7 +440,15 @@ export const RegisterPage = () => {
             <NextButton color={color} action={prevPage} message="Prev" />
             {isFormComplete ? (
               isSubmitted ? (
-                <div className="loading-spinner" />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="loading-spinner" />
+                </div>
               ) : (
                 <NextButton
                   color={color}

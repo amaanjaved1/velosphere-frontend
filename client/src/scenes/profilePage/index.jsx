@@ -27,7 +27,7 @@ export const ProfilePage = () => {
   const [sentby, setSentBy] = useState(false);
   const [card, setCard] = useState({});
   const [company, setCompany] = useState("");
-  const [color, setColor] = useState("#ff46c0");
+  const color = "#ff46c0";
 
   const getCard = async () => {
     try {
@@ -110,23 +110,12 @@ export const ProfilePage = () => {
         setCState(cstate);
         setSentBy(sentby);
         setCompany(company);
-        getColor();
         return true;
       } else {
         console.log(`Request failed: ${response.status}`);
       }
     } catch (err) {
       console.log(err);
-    }
-  };
-
-  const getColor = () => {
-    if (company === "mdfinancial") {
-      setColor("#0a085b");
-    } else if (company === "tangerine") {
-      setColor("#fe793e");
-    } else {
-      setColor("#980a0e");
     }
   };
 
@@ -143,7 +132,6 @@ export const ProfilePage = () => {
       }
     };
     fetchData();
-    getColor();
   }, [isEditing]);
 
   return (
