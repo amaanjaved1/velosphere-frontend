@@ -11,6 +11,16 @@ export const BigCard = ({
   sentby,
   color,
 }) => {
+  let companyColor = "";
+
+  if (cardContent.company === "SCOTIABANK") {
+    companyColor = "#980a0e";
+  } else if (cardContent.company === "TANGERINE") {
+    companyColor = "#fe793e";
+  } else {
+    companyColor = "#0a085b";
+  }
+
   return (
     <div className="big-card">
       <div className="big-card-left">
@@ -35,7 +45,7 @@ export const BigCard = ({
       <div className="big-card-right">
         <h1 className="big-right-title">{cardContent.firstName}</h1>
         <h1 className="big-right-title">{cardContent.lastName}</h1>
-        <h2 className="big-right-company" style={{ color: color }}>
+        <h2 className="big-right-company" style={{ color: companyColor }}>
           {cardContent.company}
         </h2>
         <h2 className="big-right-program">{cardContent.studentProgram}</h2>

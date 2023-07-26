@@ -27,7 +27,7 @@ export const ProfilePage = () => {
   const [sentby, setSentBy] = useState(false);
   const [card, setCard] = useState({});
   const [company, setCompany] = useState("");
-  const color = "#ff46c0";
+  const color = "#FFFFEA";
 
   const getCard = async () => {
     try {
@@ -168,6 +168,7 @@ export const ProfilePage = () => {
             <div
               id="temp-1"
               style={{
+                color: isAboutSection ? "#000000" : "#FFFFFF",
                 backgroundColor: isAboutSection ? color : "#3e3e3e",
               }}
               onClick={() => {
@@ -179,6 +180,7 @@ export const ProfilePage = () => {
             <div
               id="temp-2"
               style={{
+                color: isAboutSection ? "#FFFFFF" : "#000000",
                 backgroundColor: isAboutSection ? "#3e3e3e" : color,
               }}
               onClick={() => {

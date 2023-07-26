@@ -47,16 +47,28 @@ export const ProfileAbout = ({ cardContent, color }) => {
       <div className="profile-large-text">
         <h1>Me In 4 Tags</h1>
         <div className="profile-large-sub-elements">
-          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+          <div
+            className="profile-large-tag"
+            style={{ backgroundColor: color, color: "black" }}
+          >
             {cardContent.meInFourTags1}
           </div>
-          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+          <div
+            className="profile-large-tag"
+            style={{ backgroundColor: color, color: "black" }}
+          >
             {cardContent.meInFourTags2}
           </div>
-          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+          <div
+            className="profile-large-tag"
+            style={{ backgroundColor: color, color: "black" }}
+          >
             {cardContent.meInFourTags3}
           </div>
-          <div className="profile-large-tag" style={{ backgroundColor: color }}>
+          <div
+            className="profile-large-tag"
+            style={{ backgroundColor: color, color: "black" }}
+          >
             {cardContent.meInFourTags4}
           </div>
         </div>

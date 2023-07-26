@@ -12,6 +12,16 @@ export const Card = ({
   color,
   inGrid,
 }) => {
+  let companyColor = "";
+
+  if (cardContent.company === "SCOTIABANK") {
+    companyColor = "#980a0e";
+  } else if (cardContent.company === "TANGERINE") {
+    companyColor = "#fe793e";
+  } else {
+    companyColor = "#0a085b";
+  }
+
   return (
     <div className="card">
       <div className="card-left">
@@ -30,24 +40,26 @@ export const Card = ({
               profileEmail={profileEmail}
               sentby={sentby}
             />
-          ) : (
+          ) : inGrid ? (
             <a href={`/profile/${profileEmail}`}>
               <div className="term-tag" style={{ backgroundColor: color }}>
                 Visit
               </div>
             </a>
-          )}
+          ) : null}
         </div>
       </div>
       <div className="card-right">
         <h1 className="right-title">{cardContent.firstName}</h1>
         <h1 className="right-title">{cardContent.lastName}</h1>
-        <h2 className="right-company" style={{ color: color }}>
+        <h2 className="right-company" style={{ color: companyColor }}>
           {cardContent.company}
         </h2>
         <h2 className="right-program">{cardContent.studentProgram}</h2>
         <h2 className="right-loc">{cardContent.educationalInstitution}</h2>
-        <h2 className="right-loc">{cardContent.internPosition}</h2>
+        <h2 className="right-loc" style={{ marginTop: "5px" }}>
+          {cardContent.internPosition}
+        </h2>
       </div>
     </div>
   );

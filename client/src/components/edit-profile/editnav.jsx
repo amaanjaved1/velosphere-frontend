@@ -8,6 +8,7 @@ export const EditNav = ({ message, onClick, color }) => {
         <button
           className="editnav-message"
           style={{
+            color: message === "Edit" ? "#000000" : "#ffffff",
             backgroundColor: message === "Edit" ? color : "#ffffff26",
             cursor: "pointer",
           }}
