@@ -79,11 +79,19 @@ export const RequestCardGrid = ({ pageType, defaultMessage }) => {
       const cards = [];
 
       for (let i = 0; i < content.length; i++) {
+        let card_email = content[i].sentby;
+        if (pageType === "connections") {
+          if (email === content[i].user1id) {
+            card_email = content[i].user2id;
+          } else {
+            card_email = content[i].user1id;
+          }
+        }
         const card = (
           <RequestCard
             key={i}
-            email={content[i].sentby}
-            link={`/profile/${content[i].sentby}`}
+            email={card_email}
+            link={`/profile/${card_email}`}
             token={token}
             actionFrom={email}
             handleClear={handleClear}
