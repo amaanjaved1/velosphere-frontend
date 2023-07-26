@@ -42,7 +42,10 @@ export const Card = ({
             />
           ) : inGrid ? (
             <a href={`/profile/${profileEmail}`}>
-              <div className="term-tag" style={{ backgroundColor: color }}>
+              <div
+                className="term-tag"
+                style={{ backgroundColor: color, textDecoration: "none" }}
+              >
                 Visit
               </div>
             </a>
