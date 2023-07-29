@@ -5,6 +5,7 @@ export const ProfileCareer = ({ cardContent }) => {
   let schoolProgram = cardContent.schoolProgram || "";
   let internPosition = cardContent.internPosition || "";
   let internTeam = cardContent.internTeam || "";
+  let studentLocation = cardContent.studentLocation || "";
 
   if (educationalInstitution.length > 25) {
     educationalInstitution = educationalInstitution.slice(0, 22) + "...";
@@ -20,6 +21,10 @@ export const ProfileCareer = ({ cardContent }) => {
 
   if (internTeam.length > 25) {
     internTeam = internTeam.slice(0, 22) + "...";
+  }
+
+  if (studentLocation.length > 25) {
+    studentLocation = studentLocation.slice(0, 22) + "...";
   }
 
   return (
@@ -39,6 +44,10 @@ export const ProfileCareer = ({ cardContent }) => {
       <h1 className="profile-career-heading">Service Line:</h1>
       <div className="profile-text">
         <h1>{internTeam}</h1>
+      </div>
+      <h1 className="profile-career-heading">Location:</h1>
+      <div className="profile-text">
+        <h1>{studentLocation}</h1>
       </div>
     </div>
   );
