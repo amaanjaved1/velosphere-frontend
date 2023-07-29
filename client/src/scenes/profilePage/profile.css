@@ -54,7 +54,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
   margin-bottom: 50px;
 }
 
@@ -99,12 +98,13 @@
   width: 40%;
   min-width: 300px;
   max-width: 500px;
-  padding-top: 8px;
+  padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 .profile-text h1 {
@@ -113,6 +113,16 @@
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.3em;
+}
+
+.profile-career-heading {
+  background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  margin-bottom: 10px;
 }
 
 #profile-large-sentence {

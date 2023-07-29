@@ -191,7 +191,11 @@ export const ProfilePage = () => {
             </div>
           </div>
           {isAboutSection ? (
-            <ProfileAbout cardContent={card} color={color} />
+            <ProfileAbout
+              cardContent={card}
+              color={color}
+              profileEmail={profileEmail}
+            />
           ) : (
             <ProfileCareer cardContent={card} />
           )}
