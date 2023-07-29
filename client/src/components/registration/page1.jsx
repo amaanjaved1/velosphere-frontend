@@ -25,6 +25,7 @@ export const Page1 = ({ inputProps }) => {
           placeholder="i.e. you@company-email.com"
           content={inputProps.emailKey.content}
           valuefunction={inputProps.emailKey.valuefunction}
+          max={230}
         />
       </div>
     </div>

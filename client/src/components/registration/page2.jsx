@@ -15,6 +15,7 @@ export const Page2 = ({ inputProps }) => {
           placeholder="Where email communications will be sent"
           content={inputProps.commEmailKey.content}
           valuefunction={inputProps.commEmailKey.valuefunction}
+          max={200}
         />
         <InputFieldButton
           type="firstName"
@@ -24,6 +25,7 @@ export const Page2 = ({ inputProps }) => {
           placeholder="i.e. Amaan"
           content={inputProps.firstNameKey.content}
           valuefunction={inputProps.firstNameKey.valuefunction}
+          max={25}
         />
         <InputFieldButton
           type="lastName"
@@ -33,6 +35,7 @@ export const Page2 = ({ inputProps }) => {
           placeholder="i.e. Javed"
           content={inputProps.lastNameKey.content}
           valuefunction={inputProps.lastNameKey.valuefunction}
+          max={25}
         />
         <InputFieldButton
           type="password"
@@ -42,6 +45,7 @@ export const Page2 = ({ inputProps }) => {
           placeholder="Please DO NOT use your work password(s)"
           content={inputProps.passwordKey.content}
           valuefunction={inputProps.passwordKey.valuefunction}
+          max={230}
         />
       </div>
     </div>

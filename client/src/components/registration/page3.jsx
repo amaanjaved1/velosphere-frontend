@@ -25,6 +25,7 @@ export const Page3 = ({ inputProps }) => {
           placeholder="i.e. Software Developer Intern"
           content={inputProps.internPositionKey.content}
           valuefunction={inputProps.internPositionKey.valuefunction}
+          max={55}
         />
         <InputFieldButton
           type="internTeam"
@@ -34,6 +35,7 @@ export const Page3 = ({ inputProps }) => {
           placeholder="i.e. CID&A"
           content={inputProps.internTeamKey.content}
           valuefunction={inputProps.internTeamKey.valuefunction}
+          max={55}
         />
         <InputFieldButton
           type="location"

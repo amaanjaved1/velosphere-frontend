@@ -15,6 +15,7 @@ export const Page4 = ({ inputProps }) => {
           placeholder="i.e. Queen's University"
           content={inputProps.educationalInstitutionKey.content}
           valuefunction={inputProps.educationalInstitutionKey.valuefunction}
+          max={55}
         />
         <InputFieldButton
           type="schoolProgram"
@@ -24,6 +25,7 @@ export const Page4 = ({ inputProps }) => {
           placeholder="i.e. Computer Science"
           content={inputProps.schoolProgramKey.content}
           valuefunction={inputProps.schoolProgramKey.valuefunction}
+          max={55}
         />
       </div>
     </div>

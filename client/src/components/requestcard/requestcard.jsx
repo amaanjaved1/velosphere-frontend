@@ -23,6 +23,11 @@ export const RequestCard = ({
     company = "MD Financial";
   }
 
+  let cardEmail = email || "";
+  if (cardEmail.length > 29) {
+    cardEmail = cardEmail.slice(0, 26) + "...";
+  }
+
   const profilePicture = `https://robohash.org/${email}.png`;
 
   const handleAccept = async () => {
@@ -101,7 +106,7 @@ export const RequestCard = ({
             className="request-card-name"
             style={{ textDecoration: "underline" }}
           >
-            {email}
+            {cardEmail}
           </h1>
         </a>
         <h2

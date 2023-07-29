@@ -4,7 +4,7 @@ export const ProfileCareer = ({ cardContent }) => {
   return (
     <div className="profile-career-content">
       <div className="profile-text">
-        <h1>{cardContent.educationalInstitution}</h1>
+        <h1> {cardContent.educationalInstitution}</h1>
       </div>
       <div className="profile-text">
         <h1>{cardContent.schoolProgram}</h1>

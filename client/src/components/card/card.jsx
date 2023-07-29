@@ -22,6 +22,26 @@ export const Card = ({
     companyColor = "#0a085b";
   }
 
+  let fname = cardContent.firstName || "";
+  if (fname.length > 10) {
+    fname = fname.slice(0, 8) + "...";
+  }
+
+  let lname = cardContent.lastName || "";
+  if (lname.length > 10) {
+    lname = lname.slice(0, 8) + "...";
+  }
+
+  let educationalInstitution = cardContent.educationalInstitution || "";
+  if (educationalInstitution.length > 21) {
+    educationalInstitution = educationalInstitution.slice(0, 18) + "...";
+  }
+
+  let internPosition = cardContent.internPosition || "";
+  if (internPosition.length > 74) {
+    internPosition = internPosition.slice(0, 71) + "...";
+  }
+
   return inGrid ? (
     <a href={`/profile/${profileEmail}`} style={{ textDecoration: "none" }}>
       {" "}
@@ -46,15 +66,15 @@ export const Card = ({
           </div>
         </div>
         <div className="card-right">
-          <h1 className="right-title">{cardContent.firstName}</h1>
-          <h1 className="right-title">{cardContent.lastName}</h1>
+          <h1 className="right-title">{fname}</h1>
+          <h1 className="right-title">{lname}</h1>
           <h2 className="right-company" style={{ color: companyColor }}>
             {cardContent.company}
           </h2>
           <h2 className="right-program">{cardContent.studentProgram}</h2>
-          <h2 className="right-loc">{cardContent.educationalInstitution}</h2>
+          <h2 className="right-loc">{educationalInstitution}</h2>
           <h2 className="right-loc-position" style={{ marginTop: "5px" }}>
-            {cardContent.internPosition}
+            {internPosition}
           </h2>
         </div>
       </div>
@@ -81,15 +101,15 @@ export const Card = ({
         </div>
       </div>
       <div className="card-right">
-        <h1 className="right-title">{cardContent.firstName}</h1>
-        <h1 className="right-title">{cardContent.lastName}</h1>
+        <h1 className="right-title">{fname}</h1>
+        <h1 className="right-title">{lname}</h1>
         <h2 className="right-company" style={{ color: companyColor }}>
           {cardContent.company}
         </h2>
         <h2 className="right-program">{cardContent.studentProgram}</h2>
-        <h2 className="right-loc">{cardContent.educationalInstitution}</h2>
+        <h2 className="right-loc">{educationalInstitution}</h2>
         <h2 className="right-loc-position" style={{ marginTop: "5px" }}>
-          {cardContent.internPosition}
+          {internPosition}
         </h2>
       </div>
     </div>

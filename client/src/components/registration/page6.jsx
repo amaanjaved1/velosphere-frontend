@@ -25,6 +25,7 @@ export const Page6 = ({ inputProps }) => {
           placeholder="i.e. Coding"
           content={inputProps.tag1Key.content}
           valuefunction={inputProps.tag1Key.valuefunction}
+          max={13}
         />
         <InputFieldButton
           type="Tag2"
@@ -34,6 +35,7 @@ export const Page6 = ({ inputProps }) => {
           placeholder="i.e. Tennis"
           content={inputProps.tag2Key.content}
           valuefunction={inputProps.tag2Key.valuefunction}
+          max={13}
         />
         <InputFieldButton
           type="Tag3"
@@ -43,6 +45,7 @@ export const Page6 = ({ inputProps }) => {
           placeholder="i.e. Foodie"
           content={inputProps.tag3Key.content}
           valuefunction={inputProps.tag3Key.valuefunction}
+          max={13}
         />
         <InputFieldButton
           type="Tag4"
@@ -52,6 +55,7 @@ export const Page6 = ({ inputProps }) => {
           placeholder="i.e. Gym Bro"
           content={inputProps.tag4Key.content}
           valuefunction={inputProps.tag4Key.valuefunction}
+          max={13}
         />
       </div>
     </div>
