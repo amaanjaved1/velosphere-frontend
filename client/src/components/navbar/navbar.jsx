@@ -27,9 +27,6 @@ export const Navbar = () => {
         <a href="/">Home</a>
         <a href="/connections">My Connections</a>
         <a href="/requests">Requests</a>
-        <a href="https://airtable.com/shrTsoJhfgmp4rnt1/tbl1VhHXzHipl7geY">
-          AirTable
-        </a>
         <a
           href={`${process.env.REACT_APP_API_ENDPOINT_FRONTEND}/profile/${user}`}
         >

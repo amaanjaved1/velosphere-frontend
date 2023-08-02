@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&family=Rubik:wght@400;500;700&display=swap");
+
+.connect-big-card {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.9em;
+  color: black;
+  margin-bottom: 10px;
+  margin-left: 25px;
+  border-radius: 16px;
+  width: 125px;
+  height: 35px;
+  text-align: center;
+  cursor: pointer;
+}

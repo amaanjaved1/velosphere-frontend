@@ -1,6 +1,6 @@
 import React from "react";
 import "./bigcard.css";
-import { ConnectTag } from "components/card/connecttag";
+import { ConnectBigCard } from "components/card/connectBigCard";
 
 export const BigCard = ({
   cardContent,
@@ -48,11 +48,11 @@ export const BigCard = ({
             {cardContent.currentTerm}
           </div>
           {isMyProfile === false ? (
-            <ConnectTag
+            <ConnectBigCard
               cstate={cstate}
-              sentby={sentby}
               user={user}
               profileEmail={profileEmail}
+              sentby={sentby}
             />
           ) : null}
         </div>
