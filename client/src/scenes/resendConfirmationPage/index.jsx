@@ -6,14 +6,18 @@ import { NextButton } from "../../components/buttons/next";
 export const ResendVerificationPage = () => {
   const [email, setEmail] = useState("");
   const [commEmail, setCommEmail] = useState("");
+  const [isFetched, setIsFetched] = useState(false);
 
   const resendVerification = async () => {
+    setIsFetched(true);
     if (email === "") {
       window.alert("Please enter your email address");
+      setIsFetched(false);
       return;
     }
 
     if (!isValidEmail()) {
+      setIsFetched(false);
       window.alert("Please enter a valid email address");
       return;
     }
@@ -39,7 +43,9 @@ export const ResendVerificationPage = () => {
       } else {
         window.alert(`Request failed: ${response.status}`);
       }
+      setIsFetched(false);
     } catch (err) {
+      setIsFetched(false);
       window.alert("An error occurred", err);
     }
   };
@@ -80,9 +86,17 @@ export const ResendVerificationPage = () => {
           content={commEmail}
           valuefunction={setCommEmail}
         />
-        <NextButton action={resendVerification} message="Send" color="#ffa877">
-          Send
-        </NextButton>
+        {isFetched ? (
+          <div className="loading-spinner" />
+        ) : (
+          <NextButton
+            action={resendVerification}
+            message="Send"
+            color="#ffa877"
+          >
+            Send
+          </NextButton>
+        )}
       </div>
     </>
   );

@@ -9,8 +9,10 @@ export const ForgotPasswordPage = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isValidForm, setisValidForm] = useState(false);
+  const [isFetched, setIsFetched] = useState(false);
 
   const sendPassword = async () => {
+    setIsFetched(true);
     try {
       if (!isValidForm) {
         window.alert("Passwords must match");
@@ -40,8 +42,10 @@ export const ForgotPasswordPage = () => {
         } else {
           window.alert("Something went wrong. Try again later");
         }
+        setIsFetched(false);
       }
     } catch (err) {
+      setIsFetched(false);
       console.log(err);
     }
   };
@@ -106,13 +110,17 @@ export const ForgotPasswordPage = () => {
           content={confirmPassword}
           valuefunction={setConfirmPassword}
         />
-        <NextButton
-          action={sendPassword}
-          message="Reset"
-          color={isValidForm === true ? "green" : "#3e3e3e"}
-        >
-          Submit
-        </NextButton>
+        {isFetched ? (
+          <div className="loading-spinner" />
+        ) : (
+          <NextButton
+            action={sendPassword}
+            message="Reset"
+            color={isValidForm === true ? "green" : "#3e3e3e"}
+          >
+            Submit
+          </NextButton>
+        )}
       </div>
     </>
   );
