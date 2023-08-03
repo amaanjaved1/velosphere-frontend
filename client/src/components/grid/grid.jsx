@@ -84,7 +84,6 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
         }
 
         let cardContent = {
-          profilePicture: content[i].profilepicture,
           company: content[i].company.toUpperCase(),
           currentTerm: content[i].currentterm,
           firstName: content[i].firstname,
@@ -174,7 +173,6 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
         }
 
         let cardContent = {
-          profilePicture: content[i].profilepicture,
           company: content[i].company.toUpperCase(),
           currentTerm: content[i].currentterm,
           firstName: content[i].firstname,

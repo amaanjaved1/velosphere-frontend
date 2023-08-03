@@ -8,17 +8,10 @@ export const Page5 = ({ inputProps }) => {
       <h2 className="registration-page-desc" style={{ marginBottom: "5px" }}>
         Link Your Socials:{" "}
       </h2>
-      <h3 id="registration-not-applicable">(Type n/a if not applicable)</h3>
+      <h3 id="registration-not-applicable" style={{ marginBottom: "25px" }}>
+        (Type n/a if not applicable)
+      </h3>
       <div className="registration-content-container">
-        <InputFieldButton
-          type="twitter"
-          name="twitter"
-          id="twitter"
-          label="Twitter"
-          placeholder="Link to your Twitter account"
-          content={inputProps.twitterKey.content}
-          valuefunction={inputProps.twitterKey.valuefunction}
-        />
         <InputFieldButton
           type="LinkedIn"
           name="LinkedIn"

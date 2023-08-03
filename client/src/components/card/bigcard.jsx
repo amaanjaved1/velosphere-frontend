@@ -36,12 +36,14 @@ export const BigCard = ({
     location = location.slice(0, 28) + "...";
   }
 
+  const profilePicture = `https://robohash.org/${profileEmail}.png`;
+
   return (
     <div className="big-card">
       <div className="big-card-left">
         <div
           className="big-image-container"
-          style={{ backgroundImage: `url(${cardContent.profilePicture})` }}
+          style={{ backgroundImage: `url(${profilePicture})` }}
         ></div>
         <div className="big-card-tags">
           <div className="big-term-tag" style={{ backgroundColor: color }}>

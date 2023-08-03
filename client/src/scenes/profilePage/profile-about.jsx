@@ -1,6 +1,5 @@
 import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
@@ -50,13 +49,6 @@ export const ProfileAbout = ({ cardContent, color, profileEmail }) => {
             cardContent.linkedin.includes("linkedin") ? (
               <a href={cardContent.linkedin}>
                 <FaLinkedinIn size={50} className="profile-large-icon" />
-              </a>
-            ) : null
-          ) : null}
-          {cardContent.twitter ? (
-            cardContent.twitter.includes("twitter") ? (
-              <a href={cardContent.twitter}>
-                <BsTwitter size={50} className="profile-large-icon" />
               </a>
             ) : null
           ) : null}

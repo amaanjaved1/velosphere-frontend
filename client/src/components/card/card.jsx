@@ -42,6 +42,8 @@ export const Card = ({
     internPosition = internPosition.slice(0, 71) + "...";
   }
 
+  const profilePicture = `https://robohash.org/${profileEmail}.png`;
+
   return inGrid ? (
     <a href={`/profile/${profileEmail}`} style={{ textDecoration: "none" }}>
       {" "}
@@ -49,7 +51,7 @@ export const Card = ({
         <div className="card-left">
           <div
             className="image-container"
-            style={{ backgroundImage: `url(${cardContent.profilePicture})` }}
+            style={{ backgroundImage: `url(${profilePicture})` }}
           ></div>
           <div className="card-tags">
             <div className="term-tag" style={{ backgroundColor: color }}>
@@ -84,7 +86,7 @@ export const Card = ({
       <div className="card-left">
         <div
           className="image-container"
-          style={{ backgroundImage: `url(${cardContent.profilePicture})` }}
+          style={{ backgroundImage: `url(${profilePicture})` }}
         ></div>
         <div className="card-tags">
           <div className="term-tag" style={{ backgroundColor: color }}>

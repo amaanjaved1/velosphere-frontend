@@ -38,7 +38,6 @@ export const RegisterPage = () => {
   const [tag2, setTag2] = useState("");
   const [tag3, setTag3] = useState("");
   const [tag4, setTag4] = useState("");
-  const [twitter, setTwitter] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
   const [facebook, setFacebook] = useState("");
@@ -64,7 +63,6 @@ export const RegisterPage = () => {
     "Tag 2": tag2,
     "Tag 3": tag3,
     "Tag 4": tag4,
-    "Twitter Account": twitter,
     "LinkedIn Account": linkedin,
     "GitHub Account": github,
     "Facebook Account": facebook,
@@ -133,7 +131,6 @@ export const RegisterPage = () => {
     tag2,
     tag3,
     tag4,
-    twitter,
     linkedin,
     github,
     facebook,
@@ -236,14 +233,14 @@ export const RegisterPage = () => {
   const checkPage5Completion = () => {
     // Check to see if the social media accounts are all filled in
     // If they are, then add page 6 to the pagesCompleted array
-    if (twitter && linkedin && github && facebook) {
+    if (linkedin && github && facebook) {
       if (!pagesCompleted.includes(5)) {
         setPagesCompleted([...pagesCompleted, 5]);
       }
     }
 
     // If they are not, then remove page 6 from the pagesCompleted array
-    if (!(twitter && linkedin && github && facebook)) {
+    if (!(linkedin && github && facebook)) {
       if (pagesCompleted.includes(5)) {
         setPagesCompleted(pagesCompleted.filter((page) => page !== 5));
       }
@@ -271,8 +268,6 @@ export const RegisterPage = () => {
     let name = `${firstName}${lastName}${num}`.replace(/[^a-zA-Z0-9]/g, "");
     setUsername(name);
 
-    let profilePicture = `https://robohash.org/${email}.png`;
-
     const requestBody = {
       username: name,
       password: formValues["My Password"],
@@ -284,10 +279,8 @@ export const RegisterPage = () => {
       internPosition: formValues["Internship Position"],
       educationalInstitution: formValues["My School"],
       schoolProgram: formValues["School Program"],
-      profilePicture: profilePicture,
       meInOneSentence: formValues["One Sentence"],
       studentLocation: location,
-      twitter: formValues["Twitter Account"],
       linkedIn: formValues["LinkedIn Account"],
       facebook: formValues["Facebook Account"],
       github: formValues["GitHub Account"],
@@ -384,7 +377,6 @@ export const RegisterPage = () => {
         return <Page4 inputProps={inputProps4} />;
       case 5:
         const inputProps5 = {
-          twitterKey: { content: twitter, valuefunction: setTwitter },
           linkedinKey: { content: linkedin, valuefunction: setLinkedin },
           githubKey: { content: github, valuefunction: setGithub },
           facebookKey: { content: facebook, valuefunction: setFacebook },
