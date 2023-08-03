@@ -94,7 +94,7 @@
     rgba(255, 255, 255, 0.15) 100%
   );
   backdrop-filter: blur(50px);
-  height: 70px;
+  height: 80px;
   width: 40%;
   min-width: 300px;
   max-width: 500px;
@@ -105,6 +105,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 35px;
+  padding: 5px;
 }
 
 .profile-text h1 {

@@ -7,31 +7,31 @@ export const ProfileCareer = ({ cardContent }) => {
   let internTeam = cardContent.internTeam || "";
   let studentLocation = cardContent.studentLocation || "";
 
-  if (educationalInstitution.length > 25) {
-    educationalInstitution = educationalInstitution.slice(0, 22) + "...";
+  if (educationalInstitution.length > 60) {
+    educationalInstitution = educationalInstitution.slice(0, 57) + "...";
   }
 
-  if (schoolProgram.length > 25) {
-    schoolProgram = schoolProgram.slice(0, 22) + "...";
+  if (schoolProgram.length > 60) {
+    schoolProgram = schoolProgram.slice(0, 57) + "...";
   }
 
-  if (internPosition.length > 25) {
-    internPosition = internPosition.slice(0, 22) + "...";
+  if (internPosition.length > 60) {
+    internPosition = internPosition.slice(0, 57) + "...";
   }
 
-  if (internTeam.length > 25) {
-    internTeam = internTeam.slice(0, 22) + "...";
+  if (internTeam.length > 60) {
+    internTeam = internTeam.slice(0, 57) + "...";
   }
 
-  if (studentLocation.length > 25) {
-    studentLocation = studentLocation.slice(0, 22) + "...";
+  if (studentLocation.length > 60) {
+    studentLocation = studentLocation.slice(0, 57) + "...";
   }
 
   return (
     <div className="profile-career-content">
       <h1 className="profile-career-heading">School:</h1>
       <div className="profile-text">
-        <h1> {educationalInstitution}</h1>
+        <h1>{educationalInstitution}</h1>
       </div>
       <h1 className="profile-career-heading">School Program:</h1>
       <div className="profile-text">

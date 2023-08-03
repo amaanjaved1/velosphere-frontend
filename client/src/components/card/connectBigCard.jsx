@@ -116,8 +116,8 @@ export const ConnectBigCard = ({ cstate, user, profileEmail, sentby }) => {
           className="connect-big-card"
           onClick={acceptRequest}
           style={{
-            background:
-              "linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%)",
+            backgroundColor: "#256c0d",
+            color: "white",
           }}
         >
           Accept
