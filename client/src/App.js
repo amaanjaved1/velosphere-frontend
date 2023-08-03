@@ -11,6 +11,7 @@ import { RegistrationSuccessPage } from "scenes/registrationSuccess";
 import { ForgotPasswordPage } from "scenes/passwordPage";
 import { PrivateRoutes } from "./private";
 import { ResendVerificationPage } from "scenes/resendConfirmationPage";
+import { AboutPage } from "scenes/aboutPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             path="/resend-confirmation"
             element={<ResendVerificationPage />}
           />
+          <Route path="/about-velosphere" element={<AboutPage />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/connections" element={<ConnectionsPage />} />

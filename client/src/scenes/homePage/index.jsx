@@ -11,7 +11,7 @@ export const HomePage = () => {
       <div className="home-main-header">
         <div className="home-title">
           <h5 className="home-title-com">.com</h5>
-          <h1 className="home-title-text">VeloSphere</h1>
+          <h1 className="home-title-text">Velosphere</h1>
         </div>
       </div>
       <Search />

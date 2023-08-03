@@ -61,7 +61,7 @@ export const LoginPage = () => {
         <BsGlobe className="icon" color="white" />
         <div className="title">
           <h5 className="title-com">.com</h5>
-          <h1 className="title-text">VeloSphere</h1>
+          <h1 className="title-text">Velosphere</h1>
         </div>
         <h2 className="slogan" style={{ textAlign: "center" }}>
           Building community, fostering connections
@@ -105,6 +105,19 @@ export const LoginPage = () => {
         )}
       </form>
       <div className="bottom">
+        <h3 style={{ fontWeight: "700", marginTop: "30px" }}>
+          What is Velosphere?
+        </h3>
+        <h3
+          style={{
+            marginBottom: "30px",
+            cursor: "pointer",
+            textDecoration: "underline",
+          }}
+          onClick={() => navigate("/about-velosphere")}
+        >
+          Click here
+        </h3>
         <h3 style={{ fontWeight: "700", marginTop: "30px" }}>
           Forgot your password?
         </h3>
