@@ -20,7 +20,6 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
     cardContent.educationalInstitution
   );
   const [schoolProgram, setSchoolProgram] = useState(cardContent.schoolProgram);
-  const [twitter, setTwitter] = useState(cardContent.twitter);
   const [facebook, setFacebook] = useState(cardContent.facebook);
   const [linkedin, setLinkedin] = useState(cardContent.linkedin);
   const [github, setGithub] = useState(cardContent.github);
@@ -31,6 +30,33 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
   const [meInFourTags2, setMeInFourTags2] = useState(cardContent.meInFourTags2);
   const [meInFourTags3, setMeInFourTags3] = useState(cardContent.meInFourTags3);
   const [meInFourTags4, setMeInFourTags4] = useState(cardContent.meInFourTags4);
+  const [pastTerms, setPastTerms] = useState(
+    cardContent.pastTerms
+      .slice(1, -1)
+      .split('","')
+      .map((element) => element.replace(/"/g, ""))
+      .join(", ")
+  );
+  const [isFetched, setIsFetched] = useState(false);
+
+  const validatePastTerms = () => {
+    if (pastTerms.length === 0) {
+      return true;
+    }
+
+    let response = true;
+    let array = pastTerms.split(", ");
+
+    if (pastTerms.length !== 0) {
+      for (let date of array) {
+        if (!date.match(/^[sfw]\d{2}$/i)) {
+          response = false;
+        }
+      }
+    }
+
+    return response;
+  };
 
   const validateEdits = () => {
     let valid = true;
@@ -112,13 +138,6 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
       document.getElementById("schoolProgram").style.backgroundColor = "";
     }
 
-    if (twitter.length === 0) {
-      document.getElementById("twitter").style.backgroundColor = "red";
-      valid = false;
-    } else {
-      document.getElementById("twitter").style.backgroundColor = "";
-    }
-
     if (facebook.length === 0) {
       document.getElementById("facebook").style.backgroundColor = "red";
       valid = false;
@@ -175,16 +194,24 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
       document.getElementById("tag4").style.backgroundColor = "";
     }
 
+    if (validatePastTerms() === false) {
+      document.getElementById("pastTerms").style.backgroundColor = "red";
+      valid = false;
+    } else {
+      document.getElementById("pastTerms").style.backgroundColor = "";
+    }
+
     return valid;
   };
 
   const updateProfile = async () => {
     try {
+      setIsFetched(true);
       const requestBody = {
         actionFrom: user,
         fieldsToUpdate: {
           currentterm: currentTerm,
-          pastterms: [],
+          pastterms: pastTerms.split(", "),
           company: company.toLowerCase(),
           studentprogram: studentProgram,
           internposition: internPosition,
@@ -192,7 +219,6 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           studentlocation: location,
           educationalinstitution: educationalInstitution,
           schoolprogram: schoolProgram,
-          twitter: twitter,
           facebook: facebook,
           linkedin: linkedin,
           github: github,
@@ -217,7 +243,9 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
       );
 
       console.log(response);
+      setIsFetched(false);
     } catch (err) {
+      setIsFetched(false);
       console.log(err);
     }
   };
@@ -299,15 +327,6 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           valuefunction={setSchoolProgram}
         />
         <InputFieldButton
-          type="twitter"
-          name="twitter"
-          id="twitter"
-          label="Twitter"
-          placeholder="Link to your Twitter account"
-          content={twitter}
-          valuefunction={setTwitter}
-        />
-        <InputFieldButton
           type="LinkedIn"
           name="LinkedIn"
           id="linkedin"
@@ -379,24 +398,37 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           content={meInFourTags4}
           valuefunction={setMeInFourTags4}
         />
-        <button
-          className="edit-view-submit"
-          onClick={async (e) => {
-            // Prevent the form from submitting
-            e.preventDefault();
+        <InputFieldButton
+          type="pastTerms"
+          name="pastTerms"
+          id="pastTerms"
+          label="pastTerms"
+          placeholder="Format: S23, F22, W22 or blank!"
+          content={pastTerms}
+          valuefunction={setPastTerms}
+        />
+        {isFetched ? (
+          <div className="loading-spinner" style={{ marginBottom: "15px" }} />
+        ) : (
+          <button
+            className="edit-view-submit"
+            onClick={async (e) => {
+              // Prevent the form from submitting
+              e.preventDefault();
 
-            let result = validateEdits();
+              let result = validateEdits();
 
-            if (result) {
-              await updateProfile();
-              setIsEditing(false);
-            } else {
-              window.alert("Invalid fields");
-            }
-          }}
-        >
-          Save
-        </button>
+              if (result) {
+                await updateProfile();
+                setIsEditing(false);
+              } else {
+                window.alert("Invalid fields");
+              }
+            }}
+          >
+            Save
+          </button>
+        )}
       </form>
     </div>
   );
