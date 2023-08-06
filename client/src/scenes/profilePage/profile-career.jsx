@@ -6,23 +6,7 @@ export const ProfileCareer = ({ cardContent }) => {
   let internPosition = cardContent.internPosition || "";
   let internTeam = cardContent.internTeam || "";
   let studentLocation = cardContent.studentLocation || "";
-  let pastTerms = cardContent.pastTerms || [];
-  let pastTermsText = "";
-
-  const correctPastTerms = pastTerms.replace(/{/g, "[").replace(/}/g, "]");
-  pastTerms = JSON.parse(correctPastTerms);
-
-  if (pastTerms.length === 1) {
-    pastTermsText = "First Term!";
-  } else {
-    for (let i = 0; i < pastTerms.length; i++) {
-      if (i === pastTerms.length - 1) {
-        pastTermsText += `${pastTerms[i]}`;
-      } else {
-        pastTermsText += `${pastTerms[i]}, `;
-      }
-    }
-  }
+  let pastTerms = cardContent.pastTerms || "";
 
   if (educationalInstitution.length > 60) {
     educationalInstitution = educationalInstitution.slice(0, 57) + "...";
@@ -68,7 +52,7 @@ export const ProfileCareer = ({ cardContent }) => {
       </div>
       <h1 className="profile-career-heading">Past Terms:</h1>
       <div className="profile-text">
-        <h1>{pastTermsText}</h1>
+        <h1>{pastTerms.length === 0 ? "First term!" : pastTerms}</h1>
       </div>
     </div>
   );

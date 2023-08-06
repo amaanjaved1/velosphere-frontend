@@ -30,10 +30,10 @@
 
 .main-search-by {
   height: 100%;
-  width: 50%;
+  width: 35%;
   border-radius: 15px;
   background-color: var(--search-button-background);
-  max-width: 500px;
+  max-width: 450px;
   font-family: "Inter", sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -52,6 +52,7 @@
   color: black;
   margin-right: 10px;
   background: linear-gradient(83.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  margin-left: 10px;
 }
 
 .main-search-by-content-input {

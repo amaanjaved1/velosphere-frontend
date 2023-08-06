@@ -30,13 +30,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
   const [meInFourTags2, setMeInFourTags2] = useState(cardContent.meInFourTags2);
   const [meInFourTags3, setMeInFourTags3] = useState(cardContent.meInFourTags3);
   const [meInFourTags4, setMeInFourTags4] = useState(cardContent.meInFourTags4);
-  const [pastTerms, setPastTerms] = useState(
-    cardContent.pastTerms
-      .slice(1, -1)
-      .split('","')
-      .map((element) => element.replace(/"/g, ""))
-      .join(", ")
-  );
+  const [pastTerms, setPastTerms] = useState(cardContent.pastTerms);
   const [isFetched, setIsFetched] = useState(false);
 
   const validatePastTerms = () => {
@@ -44,18 +38,18 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
       return true;
     }
 
-    let response = true;
-    let array = pastTerms.split(", ");
+    // Make sure that each term is in the format of s##, f##, or w##
+    // and that each term is separated by a comma and a space
 
-    if (pastTerms.length !== 0) {
-      for (let date of array) {
-        if (!date.match(/^[sfw]\d{2}$/i)) {
-          response = false;
-        }
+    const terms = pastTerms.split(", ");
+
+    for (let i = 0; i < terms.length; i++) {
+      if (!validateTerm(terms[i])) {
+        return false;
       }
     }
 
-    return response;
+    return true;
   };
 
   const validateEdits = () => {
@@ -211,7 +205,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
         actionFrom: user,
         fieldsToUpdate: {
           currentterm: currentTerm,
-          pastterms: pastTerms.split(", "),
+          pastterms: pastTerms,
           company: company.toLowerCase(),
           studentprogram: studentProgram,
           internposition: internPosition,
@@ -366,7 +360,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           type="Tag1"
           name="Tag1"
           id="tag1"
-          label="Tag1"
+          label="Tag 1"
           placeholder="i.e. Coding"
           content={meInFourTags1}
           valuefunction={setMeInFourTags1}
@@ -375,7 +369,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           type="Tag2"
           name="Tag2"
           id="tag2"
-          label="Tag2"
+          label="Tag 2"
           placeholder="i.e. Tennis"
           content={meInFourTags2}
           valuefunction={setMeInFourTags2}
@@ -384,7 +378,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           type="Tag3"
           name="Tag3"
           id="tag3"
-          label="Tag3"
+          label="Tag 3"
           placeholder="i.e. Foodie"
           content={meInFourTags3}
           valuefunction={setMeInFourTags3}
@@ -393,7 +387,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           type="Tag4"
           name="Tag4"
           id="tag4"
-          label="Tag4"
+          label="Tag 4"
           placeholder="i.e. Gym Bro"
           content={meInFourTags4}
           valuefunction={setMeInFourTags4}
@@ -402,7 +396,7 @@ export const EditView = ({ cardContent, user, token, setIsEditing }) => {
           type="pastTerms"
           name="pastTerms"
           id="pastTerms"
-          label="pastTerms"
+          label="Past Terms (must be separated by comma and space) - F22, W21"
           placeholder="Format: S23, F22, W22 or blank!"
           content={pastTerms}
           valuefunction={setPastTerms}

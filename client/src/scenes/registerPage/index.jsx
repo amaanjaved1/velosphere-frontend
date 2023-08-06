@@ -290,7 +290,6 @@ export const RegisterPage = () => {
       meIn4Tags4: formValues["Tag 4"],
       internTeam: formValues["Internship Team"],
       currentTerm: formValues["Current Term"],
-      pastTerms: [],
       commEmail: formValues["Personal Email"],
     };
 

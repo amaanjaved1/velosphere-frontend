@@ -30,10 +30,17 @@ export const Search = () => {
 
   return (
     <form className="main-search" onSubmit={searchAction}>
+      <div className="main-search-second">
+        <input
+          type="main-search-by-content-input"
+          name="main-search-by-content-input"
+          id="main-search-by-content-input"
+          className="main-search-by-content-input"
+          placeholder="Search..."
+          onChange={onSearchByContent}
+        />
+      </div>
       <div className="main-search-first">
-        <button name="main-go-by" id="main-go-by" className="main-go-by">
-          Go
-        </button>
         <select
           name="main-search-by"
           id="main-search-by"
@@ -72,16 +79,9 @@ export const Search = () => {
             Service Line
           </option>
         </select>
-      </div>
-      <div className="main-search-second">
-        <input
-          type="main-search-by-content-input"
-          name="main-search-by-content-input"
-          id="main-search-by-content-input"
-          className="main-search-by-content-input"
-          placeholder="Search..."
-          onChange={onSearchByContent}
-        />
+        <button name="main-go-by" id="main-go-by" className="main-go-by">
+          Search
+        </button>
       </div>
     </form>
   );
