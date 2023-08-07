@@ -15,7 +15,7 @@ export const Search = () => {
     e.preventDefault();
 
     // Renavigate to the search results page
-    let content = searchByContent.toLowerCase();
+    let content = searchByContent.toLowerCase().replace(/'/g, "");
 
     navigate(`/search/${searchBy}/${content}`);
   };
