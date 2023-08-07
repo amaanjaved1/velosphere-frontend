@@ -224,7 +224,9 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
       {totalPages === 0 ? (
         isFetched === false ? (
           <div className="no-results">
-            <h1 style={{ fontSize: "100%" }}>No Results Found</h1>
+            <h1 style={{ fontSize: "100%" }}>
+              No Results Found. Try refreshing, maybe.{" "}
+            </h1>
           </div>
         ) : (
           <div className="loading-spinner"></div>
