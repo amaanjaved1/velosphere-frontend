@@ -47,7 +47,7 @@ export const AboutPage = () => {
       <h2 className="about-subheading">Technical Aspects</h2>
       <h3 className="about-content">
         <span className="about-emphasis">Backend:</span> JavaScript, Node.js,
-        Express.js
+        Express.js, Redis
       </h3>
       <h3 className="about-content">
         <span className="about-emphasis">Frontend:</span> JavaScript, React.js,
@@ -58,8 +58,9 @@ export const AboutPage = () => {
       </h3>
       <h3 className="about-content">
         <span className="about-emphasis">Other Libraries/Tools I used:</span>{" "}
-        JWT, Bcrypthashing, Axiosrequests, React Router, Git, GitHub,
-        Render.com, Postman
+        JWT (authentication), Bcrypt (security - password hashing), React
+        Router, Git (Version control), GitHub (Version control), Render.com,
+        Postman
       </h3>
       <h2 className="about-subheading">Open Source:</h2>
       <h3 className="about-content">

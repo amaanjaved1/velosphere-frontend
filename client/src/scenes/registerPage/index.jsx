@@ -53,7 +53,7 @@ export const RegisterPage = () => {
     "My Password": password,
     "Student Program": studentProgram,
     "Internship Position": internPosition,
-    "Internship Team": internTeam,
+    "Service Line": internTeam,
     "Internship Location": location,
     "Current Term": currentTerm,
     "My School": educationalInstitution,
@@ -183,7 +183,7 @@ export const RegisterPage = () => {
   };
 
   const checkPage3Completion = () => {
-    // Check to see if the student program, internship position, internship team, location, and current term are all filled in
+    // Check to see if the student program, internship position, Service Line, location, and current term are all filled in
     // If they are, then add page 3 to the pagesCompleted array
     if (
       studentProgram &&
@@ -276,8 +276,8 @@ export const RegisterPage = () => {
       email: formValues["My Email"],
       studentProgram: formValues["Student Program"],
       company: company,
-      internPosition: formValues["Internship Position"],
-      educationalInstitution: formValues["My School"],
+      internPosition: formValues["Internship Position"].replace(/'/g, ""),
+      educationalInstitution: formValues["My School"].replace(/'/g, ""),
       schoolProgram: formValues["School Program"],
       meInOneSentence: formValues["One Sentence"],
       studentLocation: location,
@@ -288,7 +288,7 @@ export const RegisterPage = () => {
       meIn4Tags2: formValues["Tag 2"],
       meIn4Tags3: formValues["Tag 3"],
       meIn4Tags4: formValues["Tag 4"],
-      internTeam: formValues["Internship Team"],
+      internTeam: formValues["Service Line"].replace(/'/g, ""),
       currentTerm: formValues["Current Term"],
       commEmail: formValues["Personal Email"],
     };
