@@ -48,6 +48,26 @@
   animation: spin 1s linear infinite;
 }
 
+.grid-error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.grid-error-message h2 {
+  font-size: 20px;
+}
+
+.grid-error-message button {
+  font-size: 15px;
+  background: linear-gradient(263.1deg, #ff46c0 6.87%, #ffa877 105.82%);
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1170px) {
   .grid-container {
     grid-template-rows: 200px 200px 200px;

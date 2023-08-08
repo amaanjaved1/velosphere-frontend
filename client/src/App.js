@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import { HomePage } from "scenes/homePage";
 import { LoginPage } from "scenes/loginPage";
@@ -10,7 +10,6 @@ import { SearchResultsPage } from "scenes/searchResultsPage";
 import { RegistrationSuccessPage } from "scenes/registrationSuccess";
 import { ForgotPasswordPage } from "scenes/passwordPage";
 import { PrivateRoutes } from "./private";
-import { ResendVerificationPage } from "scenes/resendConfirmationPage";
 import { AboutPage } from "scenes/aboutPage";
 
 function App() {
@@ -25,10 +24,6 @@ function App() {
             element={<RegistrationSuccessPage />}
           />
           <Route path="/change-password" element={<ForgotPasswordPage />} />
-          <Route
-            path="/resend-confirmation"
-            element={<ResendVerificationPage />}
-          />
           <Route path="/about-velosphere" element={<AboutPage />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/" element={<HomePage />} />

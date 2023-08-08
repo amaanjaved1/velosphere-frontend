@@ -131,17 +131,6 @@ export const LoginPage = () => {
         >
           Click here
         </h3>
-        <h3 style={{ fontWeight: "700" }}>Need another verification email?</h3>
-        <h3
-          style={{
-            marginBottom: "30px",
-            cursor: "pointer",
-            textDecoration: "underline",
-          }}
-          onClick={() => navigate("/resend-confirmation")}
-        >
-          Click here
-        </h3>
         <h3 style={{ fontWeight: "700" }}>Haven't signed up yet?</h3>{" "}
         <a href="/register">
           <h3

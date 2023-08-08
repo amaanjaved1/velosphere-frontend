@@ -14,7 +14,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
   const [hasPrev, setHasPrev] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
   const [cardContent, setCardContent] = useState([]);
-  const [isFetched, setIsFetched] = useState(true);
+  const [isFetched, setIsFetched] = useState(false);
 
   const handleNext = () => {
     if (hasNext) {
@@ -32,6 +32,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
 
   const getMain = async () => {
     try {
+      setIsFetched(true);
       const response = await fetch(
         `${process.env.REACT_APP_API_ENDPOINT}/query/main/?page=${page}&limit=${limit}`,
         {
@@ -121,6 +122,7 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
 
   const getSearch = async () => {
     try {
+      setIsFetched(true);
       const response = await fetch(
         `${process.env.REACT_APP_API_ENDPOINT}/query/search/${searchBy}/${searchContent}/?page=${page}&limit=${limit}`,
         {
@@ -223,10 +225,12 @@ export const Grid = ({ pageType, searchBy, searchContent }) => {
       ) : null}
       {totalPages === 0 ? (
         isFetched === false ? (
-          <div className="no-results">
-            <h1 style={{ fontSize: "100%" }}>
-              No Results Found. Try refreshing, maybe.{" "}
-            </h1>
+          <div className="grid-error-message">
+            {pageType === "main" ? (
+              <button onClick={getMain}>Refresh results</button>
+            ) : (
+              <h2>No results found...</h2>
+            )}
           </div>
         ) : (
           <div className="loading-spinner"></div>
