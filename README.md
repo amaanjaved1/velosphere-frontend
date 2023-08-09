@@ -2,16 +2,7 @@
 
 <a name="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-[![MIT License][license-shield]][license-url]
+[![MIT License](https://img.shields.io/github/license/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend.svg?style=for-the-badge)](LICENSE.txt)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -20,37 +11,37 @@
   <a href="https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend">
   </a>
 
-<h3 align="center">Velosphere (frontend)</h3>
-
+<h3 align="center">Velosphere - Frontend Repository</h3>
   <p align="center">
     Velosphere is a networking tool designed for Velocity interns at Scotiabank + Tangerine. Interns can register for an account on the platform using their work emails and can input details about their internship. After that, interns can search for one another by different criterias and also connect with one another! This repository is the frontend of the app!
     <br />
-    <a href="https://clipchamp.com/watch/vRkbEYfJKDy">View Demo</a>
+    <br />
+    <a href="https://velosphere.onrender.com/">Live Website</a>
+    <a href="https://clipchamp.com/watch/vRkbEYfJKDy">Demo Video</a>
+
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#Why I Created Velosphere">Why I Created Velosphere</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#Contacts/Links">Contacts & Links</a></li>
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
+## Why I Created Velosphere
 
-## About The Project
+[![Velopshere Screenshot][product-screenshot]](https://example.com)
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `amaanjaved1`, `https://github.com/amaanjaved1/velosphere-frontend`, ``, `amaan-javed`, `amaanjaved2004@gmail.com`, `email`, `velosphere-frontend`, `Velosphere is a networking tool designed for Velocity interns at Scotiabank + Tangerine. Interns can register for an account on the platform using their work emails and can input details about their internship. After that, interns can search for one another by different criterias and also connect with one another!`
+`The Velocity cohort is really large - more than 200 students per term! It can be difficult to meet everyone, especially when we are all working hybrid and in different offices! It can be really difficult to meet interns outside of Velocity events!
+Back in June 2023 (my co-op term, I decided I wanted to book coffee chats with the other interns! I tried using LinkedIn and constantly hit a paywall (who wants to pay $40 a month?!?) I also tried using the Microsoft Teams Organization Chart, but it was difficult to navigate!`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,11 +62,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 
-## Contact
+## Contacts/Links
 
 My email - amaanjaved2004@gmail.com
 
-Project Link: [https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend](https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend)
+Frontend Repository Link: [https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend](https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend)
+
+Backend Repository Link: [https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-backend](https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-backend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,20 +84,6 @@ Project Link: [https://github.com/amaanjaved1/https://github.com/amaanjaved1/vel
 [license-url]: https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/amaan-javed
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
+[product-screenshot]: ./velosphere-screenshot.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com
