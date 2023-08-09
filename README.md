@@ -2,7 +2,6 @@
 
 <a name="readme-top"></a>
 
-[![MIT License](https://img.shields.io/github/license/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend.svg?style=for-the-badge)](LICENSE.txt)
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -17,6 +16,7 @@
     <br />
     <br />
     <a href="https://velosphere.onrender.com/">Live Website</a>
+    <br />
     <a href="https://clipchamp.com/watch/vRkbEYfJKDy">Demo Video</a>
 
   </p>
@@ -65,6 +65,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contacts/Links
 
 My email - amaanjaved2004@gmail.com
+
+Live Website Link: [https://velosphere.onrender.com/](https://velosphere.onrender.com/)
 
 Frontend Repository Link: [https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend](https://github.com/amaanjaved1/https://github.com/amaanjaved1/velosphere-frontend)
 
