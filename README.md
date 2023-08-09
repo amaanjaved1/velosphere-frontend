@@ -46,11 +46,32 @@ Back in June 2023 (my co-op term, I decided I wanted to book coffee chats with t
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
+Frontend:
 
 - ![React.js](https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+- ![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow.svg?style=for-the-badge&logo=javascript&logoColor=white)
 - ![HTML](https://img.shields.io/badge/-HTML-orange.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS](https://img.shields.io/badge/-CSS-blue.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+Backend:
+
+- ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+- ![Express.js](https://img.shields.io/badge/-Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+- ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+- ![JWT](https://img.shields.io/badge/-JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
+- ![Bcrypt](https://img.shields.io/badge/-bcrypt-3498DB?style=for-the-badge&logo=bcrypt&logoColor=white)
+
+Database:
+
+- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+
+Other Technologies/Tools:
+
+- ![Git](https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+- ![Render.com](https://img.shields.io/badge/-Render.com-FF6C37?style=for-the-badge&logo=render&logoColor=white)
+- ![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
