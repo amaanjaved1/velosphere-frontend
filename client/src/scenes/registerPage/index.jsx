@@ -271,8 +271,8 @@ export const RegisterPage = () => {
     const requestBody = {
       username: name,
       password: formValues["My Password"],
-      firstName: formValues["First Name"],
-      lastName: formValues["Last Name"],
+      firstName: formValues["First Name"].replace(/'/g, ""),
+      lastName: formValues["Last Name"].replace(/'/g, ""),
       email: formValues["My Email"],
       studentProgram: formValues["Student Program"],
       company: company,
