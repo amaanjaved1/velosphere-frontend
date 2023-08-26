@@ -59,6 +59,7 @@ Backend:
 - ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 - ![Express.js](https://img.shields.io/badge/-Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 - ![Redis](https://img.shields.io/badge/-Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+- ![Jest](https://img.shields.io/badge/-Jest-DC382D?style=for-the-badge&logo=jest&logoColor=white)
 - ![JWT](https://img.shields.io/badge/-JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
 - ![Bcrypt](https://img.shields.io/badge/-bcrypt-3498DB?style=for-the-badge&logo=bcrypt&logoColor=white)
 
